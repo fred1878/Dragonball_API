@@ -3,8 +3,8 @@ package com.bnta.dragonball_api.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "persons")
-public class Person {
+@Table(name = "techniques")
+public class Technique {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

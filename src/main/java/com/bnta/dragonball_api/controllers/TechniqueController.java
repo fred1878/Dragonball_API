@@ -4,6 +4,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("sagas")
-public class SagaController {
+@RequestMapping("techniques")
+public class TechniqueController {
 }
