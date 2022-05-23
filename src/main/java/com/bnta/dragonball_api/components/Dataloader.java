@@ -13,6 +13,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.time.temporal.TemporalQueries;
 import java.util.Arrays;
 
 @Component
@@ -64,7 +65,21 @@ public class Dataloader implements ApplicationRunner {
         Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
         Technique doubleBuster = new Technique("Double Buster","Beam"); //Trunks
         Technique busterCannon = new Technique("Buster Cannon","Beam"); //Trunks
-
+        Technique godBreak = new Technique("God Breaker","Beam"); //Trunks
+        Technique dodonRay = new Technique("Dodon Ray", "Beam"); //Tien
+        Technique fourWitches = new Technique("Four Witches","Rush"); //Tien
+        Technique leaveMyDaddyAlone = new Technique("Leave My Daddy Alone!","Rush"); //Gohan (Very young)
+        Technique hiddenPotential = new Technique("Hidden Potential","Beam"); //Gohan (Very young)
+        Technique afterImage = new Technique("Afterimage","Movement"); //Master Roshi (And like everyone...)
+        Technique drunkenFist = new Technique("Drunken Fists","Rush"); //Master Roshi
+        Technique thunderShockSurprise = new Technique("Thunder Shock Surprise","Beam"); //Master Roshi
+        Technique spiritBomb = new Technique("Spirit Bomb","Beam"); //Cell, Goku
+        Technique absorption = new Technique("Absoption","Support"); //Cell
+        Technique eyeLaser = new Technique("Eye Laser","Beam"); //Cell (And loads of others...)
+        Technique wolfFangFist = new Technique("Wolf Fang Fist","Rush"); //Yamcha
+        Technique spiritBall = new Technique("Spirit Ball","Beam"); //Yamcha
+        Technique eraserCannon = new Technique("Eraser Cannon","Beam"); //Broly
+        Technique lariat = new Technique("Lariat","Rush"); //Broly & Kale
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4));
 
@@ -74,11 +89,6 @@ public class Dataloader implements ApplicationRunner {
 
         personRepository.saveAll(Arrays.asList(goku));
 
-
-
     }
-
-
-
 
 }
