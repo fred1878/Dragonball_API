@@ -31,11 +31,13 @@ public class Dataloader implements ApplicationRunner {
         Saga friezaSaga = new Saga("Frieza saga", Series.DragonBall_Z, "75 - 125",
                 LocalDate.of(1999,9,21));
 
+        Saga androidSaga = new Saga("Android Saga", Series.DragonBall_Z,"126-139",LocalDate.of(2000, 9,14));
+
         Saga cellSaga = new Saga("Cell saga", Series.DragonBall_Z, "140 - 194",
                 LocalDate.of(2000,10,04));
 
 
-        sagaRepository.saveAll(Arrays.asList(friezaSaga, cellSaga));
+        sagaRepository.saveAll(Arrays.asList(friezaSaga, cellSaga,androidSaga));
 
         Technique kamehameha = new Technique("Kamehameha", "Beam");
         Technique galickGun = new Technique("Galick Gun", "Beam");
@@ -52,9 +54,6 @@ public class Dataloader implements ApplicationRunner {
                  friezaSaga, Arrays.asList(kamehameha, SSJ1));
 
         personRepository.saveAll(Arrays.asList(goku));
-
-
-
     }
 
 
