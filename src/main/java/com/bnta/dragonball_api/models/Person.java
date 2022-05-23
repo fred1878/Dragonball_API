@@ -12,4 +12,17 @@ public class Person {
     private Long id;
     @Column
     private String name;
+    @Column
+    private String planet;
+    @Column
+    private String race;
+    @Column
+    private Long powerLevel;
+    @Column
+    private int age;
+    @Column
+    private double height;
+    @Column
+    private double weight;
+
 }
