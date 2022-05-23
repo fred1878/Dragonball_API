@@ -44,6 +44,27 @@ public class Dataloader implements ApplicationRunner {
         Technique SSJ2 = new Technique("Super Saiyan 2", "Transformation");
         Technique SSJ3 = new Technique("Super Saiyan 3", "Transformation");
         Technique SSJ4 = new Technique("Super Saiyan 4", "Transformation");
+        Technique powerBlitz = new Technique("Power Blitz", "Beam"); //Android 18 and 17
+        Technique deathBeam = new Technique("Death Beam", "Beam"); //Frieza
+        Technique deathCannon = new Technique("Death Cannon", "Beam"); //Frieza
+        Technique deathSaucer = new Technique("Death Saucer", "Disc"); //Frieza
+        Technique novaStrike = new Technique("Nova Strike", "Rush"); //Frieza
+        Technique bestHeadbutt = new Technique("Best Headbutt","Rush"); //Krillin
+        Technique destructoDisc = new Technique("Destructo Disc","Disc"); //Krillin
+        Technique scatteringBullet = new Technique("Scattering Bullet","Bullet"); //Krillin
+        Technique Doubletsuibikidan = new Technique("Double Tsuibikidan", "Beam"); //Krillin
+        Technique solarFlare = new Technique("Soalr Flare","Supportive"); //Krillin
+        Technique lucoraGun = new Technique("Lucora Gun","Continuous Energy Bullet"); //Vegeta
+        Technique bigBangAttack = new Technique("Big Bang Attack","Beam"); //Vegeta
+        Technique finalImapct = new Technique("Final Impact","Beam"); //Vegeta
+        Technique bodyManipulation = new Technique("Body Manipulation","Rush"); //Kid Buu
+        Technique transfigurationBeam = new Technique("Transfiguration Beam","Beam"); //All buus?
+        Technique demonHand = new Technique("Demon Hand","Rush"); //Piccolo
+        Technique specialBeamCannon = new Technique("Special Beam Cannon","Beam"); //Piccolo
+        Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
+        Technique doubleBuster = new Technique("Double Buster","Beam"); //Trunks
+        Technique busterCannon = new Technique("Buster Cannon","Beam"); //Trunks
+
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4));
 
