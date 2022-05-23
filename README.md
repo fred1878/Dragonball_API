@@ -11,4 +11,4 @@ This API features:
 <img src="images/dragonBallClassDiagram.png">
 
 ### Entity Diagram
-<img src="images/entityDiagram.png">
+<img src="images/dragonBallEntityDiagram.png">
