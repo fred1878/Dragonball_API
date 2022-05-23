@@ -1,6 +1,7 @@
 package com.bnta.dragonball_api.repositories;
 
 import com.bnta.dragonball_api.models.Saga;
+import com.bnta.dragonball_api.models.Series;
 import org.hibernate.mapping.Collection;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -10,5 +11,6 @@ import java.util.List;
 public interface SagaRepository extends JpaRepository<Saga, Long> {
 
     List<Saga> findByReleaseDateAfter(LocalDate releaseDate);
-    List<Saga> findPersonByName(String name);
+    List<Saga> findByNameContainingIgnoreCase(String name);
+    List<Saga> findBySeries(Series series);
 }
