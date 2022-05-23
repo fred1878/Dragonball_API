@@ -30,6 +30,13 @@ public class Person {
     private double height;
     @Column
     private double weight;
+
+    @ManyToOne
+    @JoinColumn(name = "saga_id",nullable = false)
+    @JsonIgnoreProperties({"persons"})
+    private Saga saga;
+
+
     @ManyToMany
     @JoinTable(
             name = "persons_techniques",
@@ -39,14 +46,11 @@ public class Person {
     @JsonIgnoreProperties({"persons"})
     private List<Technique> techniques;
 
-    @ManyToOne
-    @JoinColumn(name = "saga_id",nullable = false)
-    @JsonIgnoreProperties({"persons"})
-    private Saga saga;
+
 
     public Person() {}
 
-    public Person(Series series, String name, int age, String planet, Long powerLevel, String race, double height, double weight, List<Technique> techniques, Saga saga) {
+    public Person(Series series, String name, int age, String planet, Long powerLevel, String race, double height, double weight, Saga saga, List<Technique> techniques) {
         this.series = series;
         this.name = name;
         this.age = age;
@@ -55,8 +59,8 @@ public class Person {
         this.race = race;
         this.height = height;
         this.weight = weight;
-        this.techniques = techniques;
         this.saga = saga;
+        this.techniques = techniques;
     }
 
     public Long getId() {

@@ -49,7 +49,7 @@ public class Dataloader implements ApplicationRunner {
 
         Person goku = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta", (long)3_000_000,
                 "Saiyan", 175, 62,
-                Arrays.asList(kamehameha, SSJ1), friezaSaga);
+                 friezaSaga, Arrays.asList(kamehameha, SSJ1));
 
         personRepository.saveAll(Arrays.asList(goku));
 
