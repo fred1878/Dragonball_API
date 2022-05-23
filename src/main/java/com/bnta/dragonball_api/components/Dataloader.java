@@ -139,7 +139,46 @@ public class Dataloader implements ApplicationRunner {
                 hellsFlash, machineImpact, hellBreaker, fusion, fusionDance, volcanoExplosion, saturdayCrush, behindYou,
                 begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken));
 
-        Person goku = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta",
+        // Dragon ball  - Piccolo saga characters
+        Person yamcha = new Person(Series.DragonBall, "Yamcha", 23, "Earth",
+                "Human",
+                piccoloSaga, Arrays.asList());
+
+        Person bulma = new Person(Series.DragonBall, "Bulma", 23, "Earth", "Human", piccoloSaga,
+                Arrays.asList());
+
+        Person chiChi = new Person(Series.DragonBall, "Chi-Chi", 19, "Earth", "Human", piccoloSaga,
+                Arrays.asList());
+
+        Person dende = new Person(Series.DragonBall, "Piccolo", 3, "Namek", "Namekian", piccoloSaga,
+                Arrays.asList());
+
+        Person goku1 = new Person(Series.DragonBall, "Goku", 18, "Planet Vegeta", "Saiyan", piccoloSaga,
+                Arrays.asList());
+
+        Person chiaotzu = new Person(Series.DragonBall, "Chiaotzu", 18, "Earth", "Human", piccoloSaga,
+                Arrays.asList());
+
+        Person tienShinhan = new Person(Series.DragonBall, "Tien Shinhan", 23, "Earth", "Triclops", piccoloSaga,
+                Arrays.asList());
+
+        Person yajirobe = new Person(Series.DragonBall, "Yajirobe", 21, "Earth", "Human", piccoloSaga,
+                Arrays.asList());
+
+        Person oolong = new Person(Series.DragonBall, "Oolong", 16, "Earth", "Animal type Earthling",
+                piccoloSaga,
+                Arrays.asList());
+
+        Person kami = new Person(Series.DragonBall, "Kami", 495, "Namek", "Namekian", piccoloSaga,
+                Arrays.asList());
+
+        Person paur = new Person(Series.DragonBall, "Paur", 13, "Earth", "Animal type Earthling", piccoloSaga,
+                Arrays.asList());
+
+        Person masterRoshi = new Person(Series.DragonBall, "Master Roshi", 326, "Earth", "Human", piccoloSaga,
+                Arrays.asList());
+
+        Person goku2 = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta",
                 "Saiyan",friezaSaga, Arrays.asList(kamehameha, SSJ1));
 
         Person vegeta = new Person(Series.DragonBall_Z, "Vegeta", 29, "Planet Vegeta",
@@ -150,11 +189,8 @@ public class Dataloader implements ApplicationRunner {
                 "Saiyan/Human",
                 cellSaga, Arrays.asList(kamehameha, SSJ1, SSJ2));
 
-        Person yamcha = new Person(Series.DragonBall, "Yamcha", 23, "Earth",
-                "Human",
-                piccoloSaga, Arrays.asList());
-
-        personRepository.saveAll(Arrays.asList(goku, teenGohan, vegeta, yamcha));
+        personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, dende, goku1, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi,
+                                                goku2, teenGohan, vegeta));
 
     }
 
