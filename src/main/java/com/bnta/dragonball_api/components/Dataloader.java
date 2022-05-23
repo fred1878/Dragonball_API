@@ -116,13 +116,17 @@ public class Dataloader implements ApplicationRunner {
         Technique spiritBall = new Technique("Spirit Ball","Beam"); //Yamcha
         Technique eraserCannon = new Technique("Eraser Cannon","Beam"); //Broly
         Technique lariat = new Technique("Lariat","Rush"); //Broly & Kale
+        Technique hellsFlash = new Technique("Hells Flash","Beam"); //Android 16
+        Technique machineImpact = new Technique("Machine Impact","Beam"); //Android 16
+        Technique hellBreaker = new Technique("Hell Breaker","Beam"); // Android 17
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, bestHeadbutt, destructoDisc,
                 scatteringBullet, Doubletsuibikidan, solarFlare, lucoraGun, bigBangAttack, finalImapct, bodyManipulation,
                 transfigurationBeam, demonHand, specialBeamCannon, masenko, doubleBuster, busterCannon,
                 godBreak, dodonRay, fourWitches, leaveMyDaddyAlone, hiddenPotential, afterImage, drunkenFist,
-                thunderShockSurprise, spiritBomb, absorption, eyeLaser, wolfFangFist, spiritBall, eraserCannon, lariat));
+                thunderShockSurprise, spiritBomb, absorption, eyeLaser, wolfFangFist, spiritBall, eraserCannon, lariat,
+                hellsFlash, machineImpact, hellBreaker));
 
         Person goku = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta", (long)3_000_000,
                 "Saiyan", 175, 62,
