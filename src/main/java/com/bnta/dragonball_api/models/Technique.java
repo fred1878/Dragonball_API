@@ -21,7 +21,7 @@ public class Technique {
     private String type;
 
     @ManyToMany(mappedBy = "techniques",cascade = CascadeType.ALL)
-//    @JsonIgnoreProperties({"sagas"})
+    @JsonIgnoreProperties({"techniques", "saga"})
     private List<Person> persons;
 
     public Technique() {}
@@ -30,5 +30,33 @@ public class Technique {
         this.name = name;
         this.type = type;
         this.persons = new ArrayList<>();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public List<Person> getPersons() {
+        return persons;
+    }
+
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
     }
 }
