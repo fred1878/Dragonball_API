@@ -8,7 +8,7 @@ This API features:
 3. Derived queries for multiple end-points **(see list)**
 
 ### Class Diagram
-<img src="images/dragonBallClassDiagram.png">
+<img src="images/classDiagram.png">
 
 ### Entity Diagram
-<img src="images/dragonBallEntityDiagram.png">
+<img src="images/entityDiagram.png">
