@@ -21,7 +21,7 @@ public class Technique {
     private String type;
 
     @ManyToMany(mappedBy = "techniques",cascade = CascadeType.ALL)
-    @JsonIgnoreProperties({"techniques","sagas"})
+//    @JsonIgnoreProperties({"sagas"})
     private List<Person> persons;
 
     public Technique() {}

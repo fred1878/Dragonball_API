@@ -25,7 +25,7 @@ public class Saga {
     @Column
     private LocalDate releaseDate;
     @OneToMany(mappedBy = "saga", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties({"technique"})
+    @JsonIgnoreProperties({ "saga"})
     private List<Person> persons;
 
     public Saga() {}

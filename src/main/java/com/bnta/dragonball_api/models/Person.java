@@ -36,12 +36,12 @@ public class Person {
             joinColumns = {@JoinColumn(name = "person_id", nullable = false)},
             inverseJoinColumns = {@JoinColumn(name = "technique_id")}
     )
-    @JsonIgnoreProperties({"persons"})
+//    @JsonIgnoreProperties({"persons"})
     private List<Technique> techniques;
 
     @ManyToOne
     @JoinColumn(name = "saga_id",nullable = false)
-    @JsonIgnoreProperties({"person","techniques"})
+//    @JsonIgnoreProperties({"person"})
     private Saga saga;
 
     public Person() {}
