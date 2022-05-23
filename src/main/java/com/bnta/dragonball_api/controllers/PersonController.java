@@ -29,7 +29,6 @@ public class PersonController {
         return new ResponseEntity<>(personRepository.findById(id), HttpStatus.OK);
     }
 
-
     //POST
     @PostMapping // localhost:8080/persons
     public ResponseEntity<Person> createPerson(@RequestBody Person newPerson){

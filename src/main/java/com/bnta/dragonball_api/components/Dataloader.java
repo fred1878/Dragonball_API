@@ -73,14 +73,15 @@ public class Dataloader implements ApplicationRunner {
                                              godsOfTheUniverseSaga, zenoSaga,
                                              grandTourSaga));
 
-
-        Technique kamehameha = new Technique("Kamehameha", "Beam");
-        Technique galickGun = new Technique("Galick Gun", "Beam");
-        Technique instantTransmission = new Technique("Instant Transmission", "Teleportation");
-        Technique SSJ1 = new Technique("Super Saiyan 1", "Transformation");
-        Technique SSJ2 = new Technique("Super Saiyan 2", "Transformation");
-        Technique SSJ3 = new Technique("Super Saiyan 3", "Transformation");
-        Technique SSJ4 = new Technique("Super Saiyan 4", "Transformation");
+        Technique flight = new Technique("Flight","Movement"); //Anyone with ki
+        Technique kamehameha = new Technique("Kamehameha", "Beam"); //Loads
+        Technique galickGun = new Technique("Galick Gun", "Beam"); //Vegeta
+        Technique instantTransmission = new Technique("Instant Transmission", "Teleportation"); //Like everyone
+        Technique SSJ1 = new Technique("Super Saiyan 1", "Transformation"); //Loads
+        Technique SSJ2 = new Technique("Super Saiyan 2", "Transformation"); //Loads
+        Technique SSJ3 = new Technique("Super Saiyan 3", "Transformation"); //Loads
+        Technique SSJ4 = new Technique("Super Saiyan 4", "Transformation"); //Loads
+        Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku
         Technique powerBlitz = new Technique("Power Blitz", "Beam"); //Android 18 and 17
         Technique deathBeam = new Technique("Death Beam", "Beam"); //Frieza
         Technique deathCannon = new Technique("Death Cannon", "Beam"); //Frieza
@@ -109,7 +110,7 @@ public class Dataloader implements ApplicationRunner {
         Technique afterImage = new Technique("Afterimage","Movement"); //Master Roshi (And like everyone...)
         Technique drunkenFist = new Technique("Drunken Fists","Rush"); //Master Roshi
         Technique thunderShockSurprise = new Technique("Thunder Shock Surprise","Beam"); //Master Roshi
-        Technique spiritBomb = new Technique("Spirit Bomb","Beam"); //Cell, Goku
+        Technique spiritBomb = new Technique("Spirit Bomb","Energy Sphere"); //Cell, Goku
         Technique absorption = new Technique("Absoption","Support"); //Cell
         Technique eyeLaser = new Technique("Eye Laser","Beam"); //Cell (And loads of others...)
         Technique wolfFangFist = new Technique("Wolf Fang Fist","Rush"); //Yamcha
@@ -118,7 +119,16 @@ public class Dataloader implements ApplicationRunner {
         Technique lariat = new Technique("Lariat","Rush"); //Broly & Kale
         Technique hellsFlash = new Technique("Hells Flash","Beam"); //Android 16
         Technique machineImpact = new Technique("Machine Impact","Beam"); //Android 16
-        Technique hellBreaker = new Technique("Hell Breaker","Beam"); // Android 17
+        Technique hellBreaker = new Technique("Hell Breaker","Beam"); //Android 17
+        Technique fusion = new Technique("Fusion","Transformation"); //.... A lot
+        Technique fusionDance = new Technique("Fusion Dance","Transformation"); // .... A lot
+        Technique volcanoExplosion = new Technique("Volcano Explosion","Exploding wave"); //Nappa
+        Technique saturdayCrush = new Technique("Saturday Crush","Energy Sphere"); //Raditz
+        Technique behindYou = new Technique("Behind You!","Rush"); //Raditz
+        Technique begone = new Technique("Begone!","Beam"); //Raditz
+        Technique rebellionSpear = new Technique("Rebellion Spear","Rush"); //Bardock
+        Technique finalSpiritCannon = new Technique("Final Spirit Cannon","Beam/Energy Sphere"); //Bardock
+        Technique bodyChange = new Technique("Body Change","Supportive"); //Captain Ginyu
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, bestHeadbutt, destructoDisc,
@@ -126,7 +136,8 @@ public class Dataloader implements ApplicationRunner {
                 transfigurationBeam, demonHand, specialBeamCannon, masenko, doubleBuster, busterCannon,
                 godBreak, dodonRay, fourWitches, leaveMyDaddyAlone, hiddenPotential, afterImage, drunkenFist,
                 thunderShockSurprise, spiritBomb, absorption, eyeLaser, wolfFangFist, spiritBall, eraserCannon, lariat,
-                hellsFlash, machineImpact, hellBreaker));
+                hellsFlash, machineImpact, hellBreaker, fusion, fusionDance, volcanoExplosion, saturdayCrush, behindYou,
+                begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken));
 
         Person goku = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta",
                 "Saiyan",friezaSaga, Arrays.asList(kamehameha, SSJ1));
