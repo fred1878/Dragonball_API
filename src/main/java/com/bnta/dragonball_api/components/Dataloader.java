@@ -108,7 +108,17 @@ public class Dataloader implements ApplicationRunner {
                 "Saiyan", 175, 62,
                  friezaSaga, Arrays.asList(kamehameha, SSJ1));
 
-        personRepository.saveAll(Arrays.asList(goku));
+        Person vegeta = new Person(Series.DragonBall_Z, "Vegeta", 29, "Planet Vegeta", (long)2_500_000,
+                "Saiyan", 164, 56,
+                friezaSaga, Arrays.asList(galickGun));
+
+        Person teenGohan = new Person(Series.DragonBall_Z, "Teen Gohan", 10, "Earth", (long)50_000_000,
+                "Saiyan/Human", 150, 53,
+                cellSaga, Arrays.asList(kamehameha, SSJ1, SSJ2));
+
+
+
+        personRepository.saveAll(Arrays.asList(goku, teenGohan, vegeta));
     }
 
 
