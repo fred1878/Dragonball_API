@@ -7,5 +7,7 @@ This API features:
 2. Full CRUD functionality
 3. Derived queries for multiple end-points **(see list)**
 
-### 
+### Class Diagram
+
+### Entity Diagram
 
