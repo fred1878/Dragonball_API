@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,7 +23,10 @@ public class SagaController {
 
     //INDEX
     @GetMapping //localhost:8080/sagas
-    public ResponseEntity<List<Saga>> getAllSagas(){
+    public ResponseEntity<List<Saga>> getAllSagasAndFilter(@RequestParam(name = "releaseDate", required = false) String strDate){
+        if(strDate != null){
+            LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
+        }
         return new ResponseEntity<>(sagaRepository.findAll(), HttpStatus.OK);
     }
 
