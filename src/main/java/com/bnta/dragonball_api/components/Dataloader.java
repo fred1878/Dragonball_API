@@ -38,8 +38,6 @@ public class Dataloader implements ApplicationRunner {
         Saga piccoloSaga = new Saga("Piccolo Saga", Series.DragonBall, "84 - 153",
                 LocalDate.of(2002, 12, 5));
 
-
-
         // Dragon ball Z sagas
         Saga saiyanSaga = new Saga("Saiyan Saga", Series.DragonBall_Z,"1 - 35",
                 LocalDate.of(1996,9,13));
@@ -82,6 +80,27 @@ public class Dataloader implements ApplicationRunner {
         Technique SSJ2 = new Technique("Super Saiyan 2", "Transformation");
         Technique SSJ3 = new Technique("Super Saiyan 3", "Transformation");
         Technique SSJ4 = new Technique("Super Saiyan 4", "Transformation");
+        Technique powerBlitz = new Technique("Power Blitz", "Beam"); //Android 18 and 17
+        Technique deathBeam = new Technique("Death Beam", "Beam"); //Frieza
+        Technique deathCannon = new Technique("Death Cannon", "Beam"); //Frieza
+        Technique deathSaucer = new Technique("Death Saucer", "Disc"); //Frieza
+        Technique novaStrike = new Technique("Nova Strike", "Rush"); //Frieza
+        Technique bestHeadbutt = new Technique("Best Headbutt","Rush"); //Krillin
+        Technique destructoDisc = new Technique("Destructo Disc","Disc"); //Krillin
+        Technique scatteringBullet = new Technique("Scattering Bullet","Bullet"); //Krillin
+        Technique Doubletsuibikidan = new Technique("Double Tsuibikidan", "Beam"); //Krillin
+        Technique solarFlare = new Technique("Soalr Flare","Supportive"); //Krillin
+        Technique lucoraGun = new Technique("Lucora Gun","Continuous Energy Bullet"); //Vegeta
+        Technique bigBangAttack = new Technique("Big Bang Attack","Beam"); //Vegeta
+        Technique finalImapct = new Technique("Final Impact","Beam"); //Vegeta
+        Technique bodyManipulation = new Technique("Body Manipulation","Rush"); //Kid Buu
+        Technique transfigurationBeam = new Technique("Transfiguration Beam","Beam"); //All buus?
+        Technique demonHand = new Technique("Demon Hand","Rush"); //Piccolo
+        Technique specialBeamCannon = new Technique("Special Beam Cannon","Beam"); //Piccolo
+        Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
+        Technique doubleBuster = new Technique("Double Buster","Beam"); //Trunks
+        Technique busterCannon = new Technique("Buster Cannon","Beam"); //Trunks
+
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4));
 
@@ -89,7 +108,17 @@ public class Dataloader implements ApplicationRunner {
                 "Saiyan", 175, 62,
                  friezaSaga, Arrays.asList(kamehameha, SSJ1));
 
-        personRepository.saveAll(Arrays.asList(goku));
+        Person vegeta = new Person(Series.DragonBall_Z, "Vegeta", 29, "Planet Vegeta", (long)2_500_000,
+                "Saiyan", 164, 56,
+                friezaSaga, Arrays.asList(galickGun));
+
+        Person teenGohan = new Person(Series.DragonBall_Z, "Teen Gohan", 10, "Earth", (long)50_000_000,
+                "Saiyan/Human", 150, 53,
+                cellSaga, Arrays.asList(kamehameha, SSJ1, SSJ2));
+
+
+
+        personRepository.saveAll(Arrays.asList(goku, teenGohan, vegeta));
     }
 
 
