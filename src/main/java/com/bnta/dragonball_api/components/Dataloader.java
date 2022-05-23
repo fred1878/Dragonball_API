@@ -13,6 +13,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.time.temporal.TemporalQueries;
 import java.util.Arrays;
 
 @Component
@@ -100,28 +101,50 @@ public class Dataloader implements ApplicationRunner {
         Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
         Technique doubleBuster = new Technique("Double Buster","Beam"); //Trunks
         Technique busterCannon = new Technique("Buster Cannon","Beam"); //Trunks
+        Technique godBreak = new Technique("God Breaker","Beam"); //Trunks
+        Technique dodonRay = new Technique("Dodon Ray", "Beam"); //Tien
+        Technique fourWitches = new Technique("Four Witches","Rush"); //Tien
+        Technique leaveMyDaddyAlone = new Technique("Leave My Daddy Alone!","Rush"); //Gohan (Very young)
+        Technique hiddenPotential = new Technique("Hidden Potential","Beam"); //Gohan (Very young)
+        Technique afterImage = new Technique("Afterimage","Movement"); //Master Roshi (And like everyone...)
+        Technique drunkenFist = new Technique("Drunken Fists","Rush"); //Master Roshi
+        Technique thunderShockSurprise = new Technique("Thunder Shock Surprise","Beam"); //Master Roshi
+        Technique spiritBomb = new Technique("Spirit Bomb","Beam"); //Cell, Goku
+        Technique absorption = new Technique("Absoption","Support"); //Cell
+        Technique eyeLaser = new Technique("Eye Laser","Beam"); //Cell (And loads of others...)
+        Technique wolfFangFist = new Technique("Wolf Fang Fist","Rush"); //Yamcha
+        Technique spiritBall = new Technique("Spirit Ball","Beam"); //Yamcha
+        Technique eraserCannon = new Technique("Eraser Cannon","Beam"); //Broly
+        Technique lariat = new Technique("Lariat","Rush"); //Broly & Kale
+        Technique hellsFlash = new Technique("Hells Flash","Beam"); //Android 16
+        Technique machineImpact = new Technique("Machine Impact","Beam"); //Android 16
+        Technique hellBreaker = new Technique("Hell Breaker","Beam"); // Android 17
 
+        techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4,
+                powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, bestHeadbutt, destructoDisc,
+                scatteringBullet, Doubletsuibikidan, solarFlare, lucoraGun, bigBangAttack, finalImapct, bodyManipulation,
+                transfigurationBeam, demonHand, specialBeamCannon, masenko, doubleBuster, busterCannon,
+                godBreak, dodonRay, fourWitches, leaveMyDaddyAlone, hiddenPotential, afterImage, drunkenFist,
+                thunderShockSurprise, spiritBomb, absorption, eyeLaser, wolfFangFist, spiritBall, eraserCannon, lariat,
+                hellsFlash, machineImpact, hellBreaker));
 
-        techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4));
+        Person goku = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta",
+                "Saiyan",friezaSaga, Arrays.asList(kamehameha, SSJ1));
 
-        Person goku = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta", (long)3_000_000,
-                "Saiyan", 175, 62,
-                 friezaSaga, Arrays.asList(kamehameha, SSJ1));
-
-        Person vegeta = new Person(Series.DragonBall_Z, "Vegeta", 29, "Planet Vegeta", (long)2_500_000,
-                "Saiyan", 164, 56,
+        Person vegeta = new Person(Series.DragonBall_Z, "Vegeta", 29, "Planet Vegeta",
+                "Saiyan",
                 friezaSaga, Arrays.asList(galickGun));
 
-        Person teenGohan = new Person(Series.DragonBall_Z, "Teen Gohan", 10, "Earth", (long)50_000_000,
-                "Saiyan/Human", 150, 53,
+        Person teenGohan = new Person(Series.DragonBall_Z, "Teen Gohan", 10, "Earth",
+                "Saiyan/Human",
                 cellSaga, Arrays.asList(kamehameha, SSJ1, SSJ2));
 
+        Person yamcha = new Person(Series.DragonBall, "Yamcha", 23, "Earth",
+                "Human",
+                piccoloSaga, Arrays.asList());
 
+        personRepository.saveAll(Arrays.asList(goku, teenGohan, vegeta, yamcha));
 
-        personRepository.saveAll(Arrays.asList(goku, teenGohan, vegeta));
     }
-
-
-
 
 }
