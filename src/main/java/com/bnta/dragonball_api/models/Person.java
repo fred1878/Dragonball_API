@@ -23,13 +23,8 @@ public class Person {
     @Column
     private String planet;
     @Column
-    private Long powerLevel;
-    @Column
     private String race;
-    @Column
-    private double height;
-    @Column
-    private double weight;
+
 
     @ManyToOne
     @JoinColumn(name = "saga_id",nullable = false)
@@ -50,15 +45,12 @@ public class Person {
 
     public Person() {}
 
-    public Person(Series series, String name, int age, String planet, Long powerLevel, String race, double height, double weight, Saga saga, List<Technique> techniques) {
+    public Person(Series series, String name, int age, String planet, String race, Saga saga, List<Technique> techniques) {
         this.series = series;
         this.name = name;
         this.age = age;
         this.planet = planet;
-        this.powerLevel = powerLevel;
         this.race = race;
-        this.height = height;
-        this.weight = weight;
         this.saga = saga;
         this.techniques = techniques;
     }
@@ -99,36 +91,12 @@ public class Person {
         this.planet = planet;
     }
 
-    public Long getPowerLevel() {
-        return powerLevel;
-    }
-
-    public void setPowerLevel(Long powerLevel) {
-        this.powerLevel = powerLevel;
-    }
-
     public String getRace() {
         return race;
     }
 
     public void setRace(String race) {
         this.race = race;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
     }
 
     public List<Technique> getTechniques() {
