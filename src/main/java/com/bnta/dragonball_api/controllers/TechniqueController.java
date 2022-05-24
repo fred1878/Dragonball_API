@@ -19,7 +19,7 @@ public class TechniqueController {
 
     //INDEX
     @GetMapping //localhost:8080/techniques
-    public ResponseEntity<List<Technique>> getAllTechniques(){
+    public ResponseEntity<List<Technique>> getAllTechniquesAndFilters(){
         return new ResponseEntity<>(techniqueRepository.findAll(), HttpStatus.OK);
     }
 

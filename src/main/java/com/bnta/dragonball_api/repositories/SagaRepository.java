@@ -13,4 +13,5 @@ public interface SagaRepository extends JpaRepository<Saga, Long> {
     List<Saga> findByReleaseDateAfter(LocalDate releaseDate);
     List<Saga> findByNameContainingIgnoreCase(String name);
     List<Saga> findBySeries(Series series);
+    List<Saga> findByPersonsName(String name);
 }

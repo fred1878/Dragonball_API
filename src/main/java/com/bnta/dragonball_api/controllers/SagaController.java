@@ -30,8 +30,87 @@ public class SagaController {
     public ResponseEntity<List<Saga>> getAllSagasAndFilter(
             @RequestParam(name = "releaseDate", required = false) String strDate,
             @RequestParam(name = "name", required = false) String name,
-            @RequestParam(name = "series",required = false) String series){
-        if(strDate != null && name != null && series != null){
+            @RequestParam(name = "series",required = false) String series,
+            @RequestParam(name = "personName", required = false) String personName){
+        if(strDate != null && name != null && series != null && personName != null){
+            LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
+            List<Saga> list1 = sagaRepository.findByReleaseDateAfter(date);
+            List<Saga> list2 = sagaRepository.findByNameContainingIgnoreCase(name);
+            List<Saga> list3 = new ArrayList<>();
+            for(Series s : Series.values()){
+                if(s.toString().contains(series)){
+                    list3 = (sagaRepository.findBySeries(s));
+                }
+            }
+            List<Saga> list4 = sagaRepository.findByPersonsName(personName);
+            List<Saga> out = new ArrayList<>(Stream.of(list1, list2, list3, list4).flatMap(List::stream)//create a stream of each item in each list
+                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
+            return new ResponseEntity<>(out, HttpStatus.OK);
+        }
+        if(strDate != null && name != null && series == null && personName != null){
+            LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
+            List<Saga> list1 = sagaRepository.findByReleaseDateAfter(date);
+            List<Saga> list2 = sagaRepository.findByNameContainingIgnoreCase(name);
+            List<Saga> list4 = sagaRepository.findByPersonsName(personName);
+            List<Saga> out = new ArrayList<>(Stream.of(list1, list2, list4).flatMap(List::stream)//create a stream of each item in each list
+                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
+            return new ResponseEntity<>(out, HttpStatus.OK);
+        }
+        if(strDate == null && name != null && series != null && personName != null) {
+            List<Saga> list2 = sagaRepository.findByNameContainingIgnoreCase(name);
+            List<Saga> list3 = new ArrayList<>();
+            for (Series s : Series.values()) {
+                if (s.toString().contains(series)) {
+                    list3 = (sagaRepository.findBySeries(s));
+                }
+            }
+            List<Saga> list4 = sagaRepository.findByPersonsName(personName);
+            List<Saga> out = new ArrayList<>(Stream.of(list2, list3, list4).flatMap(List::stream)//create a stream of each item in each list
+                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
+            return new ResponseEntity<>(out, HttpStatus.OK);
+        }
+        if(strDate != null && name == null && series != null && personName != null){
+            LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
+            List<Saga> list1 = sagaRepository.findByReleaseDateAfter(date);
+            List<Saga> list3 = new ArrayList<>();
+            for(Series s : Series.values()){
+                if(s.toString().contains(series)){
+                    list3 = (sagaRepository.findBySeries(s));
+                }
+            }
+            List<Saga> list4 = sagaRepository.findByPersonsName(personName);
+            List<Saga> out = new ArrayList<>(Stream.of(list1,list3,list4).flatMap(List::stream)//create a stream of each item in each list
+                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
+            return new ResponseEntity<>(out, HttpStatus.OK);
+        }
+        if(strDate == null && name != null && series == null && personName != null){
+            List<Saga> list2 = sagaRepository.findByNameContainingIgnoreCase(name);
+            List<Saga> list4 = sagaRepository.findByPersonsName(personName);
+            List<Saga> out = new ArrayList<>(Stream.of(list2,list4).flatMap(List::stream)//create a stream of each item in each list
+                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
+            return new ResponseEntity<>(out, HttpStatus.OK);
+        }
+        if(strDate != null && name == null && series == null && personName != null){
+            LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
+            List<Saga> list1 = sagaRepository.findByReleaseDateAfter(date);
+            List<Saga> list4 = sagaRepository.findByPersonsName(personName);
+            List<Saga> out = new ArrayList<>(Stream.of(list1,list4).flatMap(List::stream)//create a stream of each item in each list
+                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
+            return new ResponseEntity<>(out, HttpStatus.OK);
+        }
+        if(strDate == null && name == null && series != null && personName != null){
+            List<Saga> list3 = new ArrayList<>();
+            for(Series s : Series.values()){
+                if(s.toString().contains(series)){
+                    list3 = (sagaRepository.findBySeries(s));
+                }
+            }
+            List<Saga> list4 = sagaRepository.findByPersonsName(personName);
+            List<Saga> out = new ArrayList<>(Stream.of(list3,list4).flatMap(List::stream)//create a stream of each item in each list
+                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
+            return new ResponseEntity<>(out, HttpStatus.OK);
+        }
+        if(strDate != null && name != null && series != null && personName == null){
             LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
             List<Saga> list1 = sagaRepository.findByReleaseDateAfter(date);
             List<Saga> list2 = sagaRepository.findByNameContainingIgnoreCase(name);
@@ -45,7 +124,7 @@ public class SagaController {
                     .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
             return new ResponseEntity<>(out, HttpStatus.OK);
         }
-        if(strDate != null && name != null && series == null){
+        if(strDate != null && name != null && series == null && personName == null){
             LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
             List<Saga> list1 = sagaRepository.findByReleaseDateAfter(date);
             List<Saga> list2 = sagaRepository.findByNameContainingIgnoreCase(name);
@@ -53,7 +132,7 @@ public class SagaController {
                     .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
             return new ResponseEntity<>(out, HttpStatus.OK);
         }
-        if(strDate == null && name != null && series != null) {
+        if(strDate == null && name != null && series != null && personName == null) {
             List<Saga> list2 = sagaRepository.findByNameContainingIgnoreCase(name);
             List<Saga> list3 = new ArrayList<>();
             for (Series s : Series.values()) {
@@ -65,7 +144,7 @@ public class SagaController {
                     .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
             return new ResponseEntity<>(out, HttpStatus.OK);
         }
-        if(strDate != null && name == null && series != null){
+        if(strDate != null && name == null && series != null && personName == null){
             LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
             List<Saga> list1 = sagaRepository.findByReleaseDateAfter(date);
             List<Saga> list3 = new ArrayList<>();
@@ -78,14 +157,14 @@ public class SagaController {
                     .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
             return new ResponseEntity<>(out, HttpStatus.OK);
         }
-        if(strDate == null && name != null && series == null){
+        if(strDate == null && name != null && series == null && personName == null){
             return new ResponseEntity<>(sagaRepository.findByNameContainingIgnoreCase(name),HttpStatus.OK);
         }
-        if(strDate != null && name == null && series == null){
+        if(strDate != null && name == null && series == null && personName == null){
             LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
             return new ResponseEntity<>(sagaRepository.findByReleaseDateAfter(date),HttpStatus.OK);
         }
-        if(strDate == null && name == null && series != null){
+        if(strDate == null && name == null && series != null && personName == null){
             for(Series s : Series.values()){
                 if(s.toString().contains(series)){
                     return new ResponseEntity(sagaRepository.findBySeries(s),HttpStatus.OK);
@@ -96,13 +175,11 @@ public class SagaController {
     }
 
     @GetMapping(value = "/search") //localhost:8080/sagas/1
-    public ResponseEntity<Optional<Saga>> getSaga(@RequestParam(name = "series") String series){
-        for(Series s : Series.values()){
-            if(s.toString().contains(series)){
-                return new ResponseEntity(sagaRepository.findBySeries(s),HttpStatus.OK);
-            }
+    public ResponseEntity<Optional<Saga>> getSaga(@RequestParam(name = "personName", required = false) String personName){
+        if(personName != null) {
+            return new ResponseEntity(sagaRepository.findByPersonsName(personName),HttpStatus.OK);
         }
-        return new ResponseEntity(series,HttpStatus.OK);
+        return new ResponseEntity(personName,HttpStatus.OK);
     }
 
     //SHOW
