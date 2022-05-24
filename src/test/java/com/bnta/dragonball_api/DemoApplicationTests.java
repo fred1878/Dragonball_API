@@ -1,5 +1,6 @@
 package com.bnta.dragonball_api;
 
+import com.bnta.dragonball_api.models.Person;
 import com.bnta.dragonball_api.models.Saga;
 import com.bnta.dragonball_api.models.Series;
 import com.bnta.dragonball_api.models.Technique;
@@ -55,5 +56,38 @@ class DemoApplicationTests {
 		List<Saga> found = sagaRepository.findByPersonsName("Bulma");
 		assertThat(found.size()).isEqualTo(3);
 	}
+
+	// For person
+	@Test
+	public void canFindByPersonNameContainingIgnoreCase(){
+		List<Person> found = personRepository.findByNameContainingIgnoreCase("trunks");
+		assertThat(found.size()).isEqualTo(3);
+	}
+
+	@Test
+	public void canFindByPlanetContainingIgnoreCase(){
+		List<Person> found = personRepository.findByPlanetContainingIgnoreCase("Namek");
+		assertThat(found.size()).isEqualTo(7);
+	}
+
+	@Test
+	public void canFindByAgeGreaterThan(){
+		List<Person> found = personRepository.findByAgeGreaterThan(50);
+		assertThat(found.size()).isEqualTo(6);
+	}
+
+	@Test
+	public void canFindByRaceIgnoreCase(){
+		List<Person> found = personRepository.findByRaceContainingIgnoreCase("namekian");
+		assertThat(found.size()).isEqualTo(7);
+	}
+
+	@Test
+	public void canFindPersonsBySeries(){
+		List<Person> found = personRepository.findBySeries(Series.DragonBall);
+		assertThat(found.size()).isEqualTo(13);
+	}
+
+
 
 }
