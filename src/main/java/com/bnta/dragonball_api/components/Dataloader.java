@@ -13,7 +13,6 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.time.temporal.TemporalQueries;
 import java.util.Arrays;
 
 @Component
@@ -185,12 +184,38 @@ public class Dataloader implements ApplicationRunner {
                 "Saiyan",
                 friezaSaga, Arrays.asList(galickGun));
 
+        //Cell saga
         Person teenGohan = new Person(Series.DragonBall_Z, "Teen Gohan", 10, "Earth",
-                "Saiyan/Human",
-                cellSaga, Arrays.asList(kamehameha, SSJ1, SSJ2));
+                "Saiyan/Human", cellSaga, Arrays.asList(kamehameha, SSJ1, SSJ2));
+        Person vegetaCellSaga = new Person(Series.DragonBall_Z, "Vegeta",48,"Planet Vegeta",
+                "Saiyan", cellSaga, Arrays.asList());
+        Person futureTrunks = new Person(Series.DragonBall_Z, "Future Trunks", 18, "Earth",
+                "Sayian/Human", cellSaga, Arrays.asList());
+        Person cell = new Person(Series.DragonBall_Z, "Cell", 6, "Earth",
+                "Android", cellSaga, Arrays.asList());
+        Person gokuCellSaga = new Person(Series.DragonBall_Z, "Goku", 30, "Planet Vegeta",
+                "Saiyan", cellSaga, Arrays.asList());
+        Person android18 = new Person(Series.DragonBall_Z, "Android 18", 3, "Earth",
+                "Android", cellSaga, Arrays.asList());
+        Person android16 = new Person(Series.DragonBall_Z, "Android 16", 3, "Earth",
+                "Android", cellSaga, Arrays.asList());
+        Person krillin = new Person(Series.DragonBall_Z, "Krillin", 31, "Earth",
+                "Human", cellSaga, Arrays.asList());
+        Person piccoloCellSaga = new Person(Series.DragonBall_Z, "Piccolo", 14, "Namek",
+                "Namekian", cellSaga, Arrays.asList());
+        Person tienCellSaga = new Person(Series.DragonBall_Z, "Tien", 34, "Earth",
+                "Earthling/Cyclops", cellSaga,Arrays.asList());
+        Person dendeCellSaga = new Person(Series.DragonBall_Z, "Dende", 6, "Namek",
+                "Namekian", cellSaga, Arrays.asList());
+        Person mrPopoCellSaga = new Person(Series.DragonBall_Z, "Mr Popo", 1000, "Earth",
+                "Genie", cellSaga, Arrays.asList());
+        Person chiaotzuCellSaga = new Person(Series.DragonBall_Z, "Chiaotzu", 29, "Earth",
+                "Human", cellSaga, Arrays.asList());
+        Person trunksCellSaga = new Person(Series.DragonBall_Z, "Trunks", 1, "Earth",
+                "Human/Saiyan", cellSaga, Arrays.asList());
 
         personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, piccolo, goku1, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi,
-                                                goku2, teenGohan, vegeta));
+                                                goku2, teenGohan, vegetaCellSaga));
 
     }
 
