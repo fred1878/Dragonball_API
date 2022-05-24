@@ -1,6 +1,7 @@
 package com.bnta.dragonball_api.controllers;
 
 import com.bnta.dragonball_api.models.Person;
+import com.bnta.dragonball_api.models.Saga;
 import com.bnta.dragonball_api.models.Series;
 import com.bnta.dragonball_api.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -351,5 +352,25 @@ public class PersonController {
     public ResponseEntity<Person> deletePerson(@PathVariable Long id){
         personRepository.deleteById(id);
         return new ResponseEntity(id,HttpStatus.OK);
+    }
+
+    //UPDATE
+    @PutMapping(value = "/{id}") //localhost:8080/persons/1
+    public ResponseEntity<Person> updateSaga(@PathVariable(value = "id") Long id, @RequestBody Person upPerson) throws Exception{
+        Optional<Person> person = personRepository.findById(id);
+        if(person.isEmpty()){
+            throw new Exception("Person with id: " + id + " not found");
+        } else {
+            Person p = person.get();
+            p.setName(upPerson.getName());
+            p.setSeries(upPerson.getSeries());
+            p.setAge(upPerson.getAge());
+            p.setPlanet(upPerson.getPlanet());
+            p.setRace(upPerson.getRace());
+            p.setSaga(upPerson.getSaga());
+            p.setTechniques(upPerson.getTechniques());
+            Person updatedPerson = personRepository.save(p);
+            return new ResponseEntity<>(updatedPerson,HttpStatus.OK);
+        }
     }
 }

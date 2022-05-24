@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -54,6 +55,12 @@ class DemoApplicationTests {
 	public void canFindByPersonsName(){
 		List<Saga> found = sagaRepository.findByPersonsName("Bulma");
 		assertThat(found.size()).isEqualTo(3);
+	}
+
+	@Test
+	public void exceptionTest(){
+		Optional<Technique> t = techniqueRepository.findById(10000L);
+		assertThat(t.isEmpty()).isTrue();
 	}
 
 }
