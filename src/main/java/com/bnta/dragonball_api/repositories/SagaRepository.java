@@ -2,7 +2,6 @@ package com.bnta.dragonball_api.repositories;
 
 import com.bnta.dragonball_api.models.Saga;
 import com.bnta.dragonball_api.models.Series;
-import org.hibernate.mapping.Collection;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

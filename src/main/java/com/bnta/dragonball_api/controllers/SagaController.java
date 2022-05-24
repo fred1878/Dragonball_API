@@ -1,9 +1,7 @@
 package com.bnta.dragonball_api.controllers;
 
-import com.bnta.dragonball_api.models.Person;
 import com.bnta.dragonball_api.models.Saga;
 import com.bnta.dragonball_api.models.Series;
-import com.bnta.dragonball_api.repositories.PersonRepository;
 import com.bnta.dragonball_api.repositories.SagaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -172,14 +170,6 @@ public class SagaController {
             }
         }
         return new ResponseEntity<>(sagaRepository.findAll(), HttpStatus.OK);
-    }
-
-    @GetMapping(value = "/search") //localhost:8080/sagas/1
-    public ResponseEntity<Optional<Saga>> getSaga(@RequestParam(name = "personName", required = false) String personName){
-        if(personName != null) {
-            return new ResponseEntity(sagaRepository.findByPersonsName(personName),HttpStatus.OK);
-        }
-        return new ResponseEntity(personName,HttpStatus.OK);
     }
 
     //SHOW
