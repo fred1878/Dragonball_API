@@ -269,7 +269,7 @@ public class Dataloader implements ApplicationRunner {
                 Arrays.asList(kamehameha,afterImage));
 
         Person krillinPiccoloSaga= new Person(Series.DragonBall, "Krillin", 20, "Earth",
-                "Human", piccoloSaga, Arrays.asList(kamehameha,afterImage));
+                "Human", piccoloSaga, Arrays.asList(kamehameha,afterImage,solarFlare));
 
         // Dragon ball Z - Saiyan saga
         Person saibamanSaiyanSaga = new Person(Series.DragonBall_Z, "Saibaman", 0, "Planet Vegeta", "Alien",
