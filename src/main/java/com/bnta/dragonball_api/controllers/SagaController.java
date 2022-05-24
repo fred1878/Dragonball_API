@@ -1,9 +1,7 @@
 package com.bnta.dragonball_api.controllers;
 
-import com.bnta.dragonball_api.models.Person;
 import com.bnta.dragonball_api.models.Saga;
 import com.bnta.dragonball_api.models.Series;
-import com.bnta.dragonball_api.repositories.PersonRepository;
 import com.bnta.dragonball_api.repositories.SagaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

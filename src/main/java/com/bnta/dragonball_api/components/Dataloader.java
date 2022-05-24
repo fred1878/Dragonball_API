@@ -177,6 +177,52 @@ public class Dataloader implements ApplicationRunner {
         Person masterRoshi = new Person(Series.DragonBall, "Master Roshi", 326, "Earth", "Human", piccoloSaga,
                 Arrays.asList());
 
+        Person krillen = new Person(Series.DragonBall, "Krillen", 20, "Earth",
+                "Human", piccoloSaga, Arrays.asList());
+
+
+
+        // Dragon ball Z - Frieza saga
+        Person krillen2 = new Person(Series.DragonBall_Z, "Krillen", 26, "Earth",
+                "Human", friezaSaga, Arrays.asList());
+
+        Person yajirobe2 = new Person(Series.DragonBall_Z, "Yajirobe", 27, "Earth",
+                "Human", friezaSaga, Arrays.asList());
+
+        Person dende = new Person(Series.DragonBall_Z, "Dende", 26, "Namek",
+                "Namekian", friezaSaga, Arrays.asList());
+
+        Person gohan = new Person(Series.DragonBall_Z, "Gohan", 5, "Earth",
+                "Saiyan/Human", friezaSaga, Arrays.asList());
+
+        Person piccolo2 = new Person(Series.DragonBall_Z, "Piccolo", 9, "Namek",
+                "Namekian", friezaSaga, Arrays.asList());
+
+        Person kingKai = new Person(Series.DragonBall_Z, "King Kai", 0, "King Kai's Planet",
+                "Core Person", friezaSaga, Arrays.asList());
+
+        Person bulma2 = new Person(Series.DragonBall_Z, "Bulma", 29, "Earth",
+                "Human", friezaSaga, Arrays.asList());
+
+        // Frieza saga / Ginyu Forces members
+        Person recoome = new Person(Series.DragonBall_Z, "Recoome", 0, "Unknown",
+                "Alien", friezaSaga, Arrays.asList());
+
+        Person burter = new Person(Series.DragonBall_Z, "Burter", 0, "Unknown",
+                "Alien", friezaSaga, Arrays.asList());
+
+        Person jeice = new Person(Series.DragonBall_Z, "Jeice", 0, "Planet Brench",
+                "Alien", friezaSaga, Arrays.asList());
+
+        Person guldo = new Person(Series.DragonBall_Z, "Guldo", 0, "Bas",
+                "Boulean", friezaSaga, Arrays.asList());
+
+        Person captainGinyu = new Person(Series.DragonBall_Z, "Captain Ginyu", 0, "Unknown",
+                "Alien", friezaSaga, Arrays.asList());
+
+        Person zarbon = new Person(Series.DragonBall_Z, "Krillen", 0, "Unknown",
+                "Alien", friezaSaga, Arrays.asList());
+
         Person goku2 = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta",
                 "Saiyan",friezaSaga, Arrays.asList(kamehameha, SSJ1));
 
@@ -185,6 +231,10 @@ public class Dataloader implements ApplicationRunner {
                 friezaSaga, Arrays.asList(galickGun));
 
         //Cell saga
+        Person frieza = new Person(Series.DragonBall_Z, "Frieza", 32, "Unkonwn","Alien",
+                friezaSaga, Arrays.asList());
+
+        // Dragon ball Z - Cell saga
         Person teenGohan = new Person(Series.DragonBall_Z, "Teen Gohan", 10, "Earth",
                 "Saiyan/Human", cellSaga, Arrays.asList(kamehameha, SSJ1, SSJ2));
         Person vegetaCellSaga = new Person(Series.DragonBall_Z, "Vegeta",48,"Planet Vegeta",
@@ -214,8 +264,9 @@ public class Dataloader implements ApplicationRunner {
         Person trunksCellSaga = new Person(Series.DragonBall_Z, "Trunks", 1, "Earth",
                 "Human/Saiyan", cellSaga, Arrays.asList());
 
-        personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, piccolo, goku1, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi,
-                                                goku2, teenGohan, vegetaCellSaga));
+        personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, piccolo, goku1, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi, krillen,
+                                                    krillen2, yajirobe2, dende, gohan, piccolo2, kingKai, bulma2, recoome, burter, jeice, guldo, captainGinyu, zarbon, goku2, vegeta,
+                                                    teenGohan));
 
     }
 
