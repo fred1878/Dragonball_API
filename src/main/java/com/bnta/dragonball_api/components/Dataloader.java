@@ -80,7 +80,7 @@ public class Dataloader implements ApplicationRunner {
         Technique SSJ2 = new Technique("Super Saiyan 2", "Transformation"); //Loads
         Technique SSJ3 = new Technique("Super Saiyan 3", "Transformation"); //Loads
         Technique SSJ4 = new Technique("Super Saiyan 4", "Transformation"); //Loads
-        Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku
+        Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku from saiyan sage onwards
         Technique powerBlitz = new Technique("Power Blitz", "Beam"); //Android 18 and 17
         Technique deathBeam = new Technique("Death Beam", "Beam"); //Frieza
         Technique deathCannon = new Technique("Death Cannon", "Beam"); //Frieza
@@ -128,6 +128,26 @@ public class Dataloader implements ApplicationRunner {
         Technique rebellionSpear = new Technique("Rebellion Spear","Rush"); //Bardock
         Technique finalSpiritCannon = new Technique("Final Spirit Cannon","Beam/Energy Sphere"); //Bardock
         Technique bodyChange = new Technique("Body Change","Supportive"); //Captain Ginyu
+        // Cells Transformations
+        Technique imperfectForm = new Technique("Imperfect Form", "Transformation");
+        Technique semiPerfectForm = new Technique("Semi-Perfect Form", "Transformation");
+        Technique perfectForm = new Technique("Perfect Form", "Transformation");
+        Technique superPerfectForm = new Technique("Super Perfect Form", "Transformation");
+        // Frieza Transformations
+        Technique firstForm = new Technique("First Form", "Transformation");
+        Technique secondForm = new Technique("Second Form", "Transformation");
+        Technique thirdForm = new Technique("Third Form", "Transformation");
+        Technique finalForm = new Technique("Final Form", "Transformation");
+        Technique finalForm100 = new Technique("100% Final Form", "Transformation");
+        //
+        Technique greatSaiyaman = new Technique("Great Saiyaman", "Transformation"); // MajinBuusaga Gohan
+        Technique potaraVegito = new Technique("Potara: Vegito (w/Vegeta)", "Transformation"); //MajinBuusaga Goku
+        Technique greatApe = new Technique("Great Ape", "Transformation"); // kid Goku in dragon ball
+        Technique maxPower = new Technique("Max Power", "Transformation"); // Master Roshi
+
+
+
+
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, bestHeadbutt, destructoDisc,
@@ -136,7 +156,9 @@ public class Dataloader implements ApplicationRunner {
                 godBreak, dodonRay, fourWitches, leaveMyDaddyAlone, hiddenPotential, afterImage, drunkenFist,
                 thunderShockSurprise, spiritBomb, absorption, eyeLaser, wolfFangFist, spiritBall, eraserCannon, lariat,
                 hellsFlash, machineImpact, hellBreaker, fusion, fusionDance, volcanoExplosion, saturdayCrush, behindYou,
-                begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken));
+                begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken,
+                imperfectForm, semiPerfectForm, perfectForm, superPerfectForm, firstForm, secondForm, thirdForm, finalForm, finalForm100, greatSaiyaman,
+                potaraVegito, greatApe, maxPower));
 
         //Dragon ball - 
 
