@@ -1,6 +1,5 @@
 package com.bnta.dragonball_api.controllers;
 
-import com.bnta.dragonball_api.models.Saga;
 import com.bnta.dragonball_api.models.Technique;
 import com.bnta.dragonball_api.repositories.TechniqueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
