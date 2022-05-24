@@ -30,7 +30,7 @@ public class Dataloader implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
 
         //Dragon ball sagas
-        Saga sonGokuSaga = new Saga("Son Goku", Series.DragonBall, "1 - 28",
+        Saga sonGokuSaga = new Saga("Son Goku Saga", Series.DragonBall, "1 - 28",
                 LocalDate.of(2001, 8, 20));
 
         Saga redRibbonArmySaga = new Saga("Red Ribbon Army Saga", Series.DragonBall, "29 - 83",
@@ -150,7 +150,7 @@ public class Dataloader implements ApplicationRunner {
         Person chiChi = new Person(Series.DragonBall, "Chi-Chi", 19, "Earth", "Human", piccoloSaga,
                 Arrays.asList());
 
-        Person dende = new Person(Series.DragonBall, "Piccolo", 3, "Namek", "Namekian", piccoloSaga,
+        Person piccolo = new Person(Series.DragonBall, "Piccolo", 3, "Namek", "Namekian", piccoloSaga,
                 Arrays.asList());
 
         Person goku1 = new Person(Series.DragonBall, "Goku", 18, "Planet Vegeta", "Saiyan", piccoloSaga,
@@ -189,7 +189,7 @@ public class Dataloader implements ApplicationRunner {
                 "Saiyan/Human",
                 cellSaga, Arrays.asList(kamehameha, SSJ1, SSJ2));
 
-        personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, dende, goku1, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi,
+        personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, piccolo, goku1, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi,
                                                 goku2, teenGohan, vegeta));
 
     }
