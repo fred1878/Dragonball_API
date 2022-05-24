@@ -182,6 +182,38 @@ public class Dataloader implements ApplicationRunner {
         Person giranSonGokuSaga = new Person(Series.DragonBall, "Giran", 33, "Unkown",
                 "Giras", sonGokuSaga, Arrays.asList());
 
+        // Dragon ball - red ribbon army
+        Person boraRedRibbonArmySaga = new Person(Series.DragonBall, "Bora", 0, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person android8RedRibbonArmySaga = new Person(Series.DragonBall, "Android 8", 0, "Earth",
+                "Android", redRibbonArmySaga, Arrays.asList());
+        Person generalBlue = new Person(Series.DragonBall, "General Blue", 28, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person bandagesTheMummy= new Person(Series.DragonBall, "Bandages The Mummy", 0, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person masterRoshiRedRibbonArmySaga = new Person(Series.DragonBall, "Master Roshi", 320, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person akkumanRedRibbonArmySaga = new Person(Series.DragonBall, "Akkuman", 0, "Earth",
+                "Devil", redRibbonArmySaga, Arrays.asList());
+        Person mercenaryTaoRedRibbonArmySaga = new Person(Series.DragonBall, "Mercenary Tao", 291, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person korinRedRibbonArmySaga = new Person(Series.DragonBall, "Korin", 800, "Earth",
+                "Cat", redRibbonArmySaga, Arrays.asList());
+        Person kidGokuRedRibbonArmySaga = new Person(Series.DragonBall, "Kid Goku", 12, "Planet Vegeta",
+                "Saiyan", redRibbonArmySaga, Arrays.asList());
+        Person grandpaGohanRedRibbonArmySaga = new Person(Series.DragonBall, "Grandpa Gohan", 0, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person commanderRed = new Person(Series.DragonBall, "Commander Red", 0, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person ninjaMurasaki = new Person(Series.DragonBall, "Ninja Murasaki", 35, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person colonelSilver = new Person(Series.DragonBall, "Colonel Silver", 0, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person generalWhite = new Person(Series.DragonBall, "generalWhite", 0, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+        Person krillinRedRibbonArmySaga = new Person(Series.DragonBall, "Krillin", 13, "Earth",
+                "Earthling", redRibbonArmySaga, Arrays.asList());
+
         // Dragon ball  - Piccolo saga characters
         Person yamcha = new Person(Series.DragonBall, "Yamcha", 23, "Earth",
                 "Human",
@@ -383,7 +415,8 @@ public class Dataloader implements ApplicationRunner {
         Person mrSatanMajinBuuSaga = new Person(Series.DragonBall_Z, "Mr Satan", 38, "Earth",
                 "Human", majinBuuSaga, Arrays.asList());
 
-        personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, piccolo, goku, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi, krillinPiccoloSaga,
+        personRepository.saveAll(Arrays.asList(boraRedRibbonArmySaga, android8RedRibbonArmySaga, generalBlue, bandagesTheMummy, masterRoshiRedRibbonArmySaga, akkumanRedRibbonArmySaga, mercenaryTaoRedRibbonArmySaga, korinRedRibbonArmySaga, kidGokuRedRibbonArmySaga, grandpaGohanRedRibbonArmySaga, commanderRed, ninjaMurasaki, colonelSilver, generalWhite, krillinRedRibbonArmySaga,
+                                                    yamcha, bulma, chiChi, piccolo, goku, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi, krillinPiccoloSaga,
                                                     saibamanSaiyanSaga, yajirobeSaiyanSaga, gohanSaiyanSaga, bulmaSaiyanSaga, nappaSaiyanSaga, chiaotzuSaiyanSaga, raditzSaiyanSaga, masterRoshiSaiyanSaga, yamchaSaiyanSaga, tienSaiyanSaga, vegetaSaiyanSaga, gokuSaiyanSaga, kingKaiSaiyanSaga, piccoloSaiyanSaga, krillinSaiyanSaga,
                                                     krillinFriezaSaga, yajirobeFriezaSaga, dendeFriezaSaga, gohanFriezaSaga, piccoloFriezaSaga, kingKaiFriezaSaga, bulmaFriezaSaga, recoome, burter, jeice, guldo, captainGinyu, zarbon, gokuFriezaSaga, vegetaFriezaSaga,
                                                     teenGohan, vegetaCellSaga, futureTrunks, cell, gokuCellSaga, android18, android16, krillinCellSaga, piccoloCellSaga, tienCellSaga, dendeCellSaga, mrPopoCellSaga, chiaotzuCellSaga, trunksCellSaga,
