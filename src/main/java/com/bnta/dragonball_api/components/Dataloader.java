@@ -90,7 +90,7 @@ public class Dataloader implements ApplicationRunner {
         Technique destructoDisc = new Technique("Destructo Disc","Disc"); //Krillin
         Technique scatteringBullet = new Technique("Scattering Bullet","Bullet"); //Krillin
         Technique doubletsuibikidan = new Technique("Double Tsuibikidan", "Beam"); //Krillin
-        Technique solarFlare = new Technique("Soalr Flare","Supportive"); //Krillin
+        Technique solarFlare = new Technique("Solar Flare","Supportive"); //Krillin
         Technique lucoraGun = new Technique("Lucora Gun","Continuous Energy Bullet"); //Vegeta
         Technique bigBangAttack = new Technique("Big Bang Attack","Beam"); //Vegeta
         Technique finalImapct = new Technique("Final Impact","Beam"); //Vegeta
@@ -290,7 +290,7 @@ public class Dataloader implements ApplicationRunner {
                 "Saiyan", cellSaga, Arrays.asList());
 
         Person futureTrunks = new Person(Series.DragonBall_Z, "Future Trunks", 18, "Earth",
-                "Sayian/Human", cellSaga, Arrays.asList());
+                "Saiyan/Human", cellSaga, Arrays.asList());
 
         Person cell = new Person(Series.DragonBall_Z, "Cell", 6, "Earth",
                 "Android", cellSaga, Arrays.asList());
