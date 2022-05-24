@@ -3,11 +3,13 @@ package com.bnta.dragonball_api.controllers;
 import com.bnta.dragonball_api.models.Technique;
 import com.bnta.dragonball_api.repositories.TechniqueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -85,5 +87,21 @@ public class TechniqueController {
     public ResponseEntity<Technique> deleteTechnique(@PathVariable Long id){
         techniqueRepository.deleteById(id);
         return new ResponseEntity(id,HttpStatus.OK);
+    }
+
+    //UPDATE
+    @PutMapping(value = "/{id}") //localhost:8080/techniques/1
+    public ResponseEntity<Technique> updateTechnique(@PathVariable(value = "id") Long id, @RequestBody Technique upTechnique) throws Exception{
+        Optional<Technique> technique = techniqueRepository.findById(id);
+        if(technique.isEmpty()){
+            throw new Exception("Technique with id: " + id + " not found");
+        } else {
+            Technique t = technique.get();
+            t.setName(upTechnique.getName());
+            t.setType(upTechnique.getType());
+            t.setPersons(upTechnique.getPersons());
+            Technique updatedTechnique = techniqueRepository.save(t);
+            return new ResponseEntity<>(updatedTechnique,HttpStatus.OK);
+        }
     }
 }

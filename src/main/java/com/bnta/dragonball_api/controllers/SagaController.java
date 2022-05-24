@@ -191,4 +191,22 @@ public class SagaController {
         sagaRepository.deleteById(id);
         return new ResponseEntity(id,HttpStatus.OK);
     }
+
+    //UPDATE
+    @PutMapping(value = "/{id}") //localhost:8080/sagas/1
+    public ResponseEntity<Saga> updateSaga(@PathVariable(value = "id") Long id, @RequestBody Saga upSaga) throws Exception{
+        Optional<Saga> saga = sagaRepository.findById(id);
+        if(saga.isEmpty()){
+            throw new Exception("Saga with id: " + id + " not found");
+        } else {
+            Saga s = saga.get();
+            s.setName(upSaga.getName());
+            s.setSeries(upSaga.getSeries());
+            s.setEpisodes(upSaga.getEpisodes());
+            s.setReleaseDate(upSaga.getReleaseDate());
+            s.setPersons(upSaga.getPersons());
+            Saga updatedSaga = sagaRepository.save(s);
+            return new ResponseEntity<>(updatedSaga,HttpStatus.OK);
+        }
+    }
 }
