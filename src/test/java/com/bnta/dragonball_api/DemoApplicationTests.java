@@ -1,5 +1,6 @@
 package com.bnta.dragonball_api;
 
+import com.bnta.dragonball_api.models.Person;
 import com.bnta.dragonball_api.models.Saga;
 import com.bnta.dragonball_api.models.Series;
 import com.bnta.dragonball_api.models.Technique;
@@ -57,7 +58,6 @@ class DemoApplicationTests {
 		assertThat(found.size()).isEqualTo(3);
 	}
 
-<<<<<<< HEAD
 	// Person query tests
 	@Test
 	public void canFindByPersonNameContainingIgnoreCase(){
@@ -107,12 +107,11 @@ class DemoApplicationTests {
 		List<Technique> found = techniqueRepository.findByPersonsName("Goku");
 		assertThat(found.size()).isEqualTo(2);
 	}
-=======
+
 	@Test
 	public void exceptionTest(){
 		Optional<Technique> t = techniqueRepository.findById(10000L);
 		assertThat(t.isEmpty()).isTrue();
 	}
 
->>>>>>> main
 }
