@@ -180,8 +180,6 @@ public class Dataloader implements ApplicationRunner {
         Person krillen = new Person(Series.DragonBall, "Krillen", 20, "Earth",
                 "Human", piccoloSaga, Arrays.asList());
 
-
-
         // Dragon ball Z - Frieza saga
         Person krillen2 = new Person(Series.DragonBall_Z, "Krillen", 26, "Earth",
                 "Human", friezaSaga, Arrays.asList());
@@ -263,6 +261,25 @@ public class Dataloader implements ApplicationRunner {
                 "Human", cellSaga, Arrays.asList());
         Person trunksCellSaga = new Person(Series.DragonBall_Z, "Trunks", 1, "Earth",
                 "Human/Saiyan", cellSaga, Arrays.asList());
+
+        //Majin Buu Saga
+        Person gokuMajinBuuSaga = new Person(Series.DragonBall_Z, "Goku", 37, "Planet Vegeta",
+                "Saiyan", majinBuuSaga, Arrays.asList());
+        Person gotenMajinBuuSaga = new Person(Series.DragonBall_Z, "Goten", 7, "Earth",
+                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+        Person trunksMajinBuuSaga = new Person(Series.DragonBall_Z, "Trunks", 8, "Earth",
+                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+        Person gotenksMajibBuuSaga = new Person(Series.DragonBall_Z, "Gotenks", 8, "Earth",
+                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+        Person majinBuu = new Person(Series.DragonBall_Z, "Majin Buu", 5000000, "Earth",
+                "Majin/Core Person", majinBuuSaga, Arrays.asList());
+        //Search for Babidi's planet
+        Person babidi = new Person(Series.DragonBall_Z, "Babidi", 5000000, "?",
+                "Babidis race - Alien Type", majinBuuSaga, Arrays.asList());
+        Person gohanMajinBuuSaga = new Person(Series.DragonBall_Z, "Gohan", 17, "Earth",
+                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+        Person mrSatanMajinBuuSaga = new Person(Series.DragonBall_Z, "Mr Satan", 38, "Earth",
+                "Human", majinBuuSaga, Arrays.asList());
 
         personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, piccolo, goku1, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi, krillen,
                                                     krillen2, yajirobe2, dende, gohan, piccolo2, kingKai, bulma2, recoome, burter, jeice, guldo, captainGinyu, zarbon, goku2, vegeta,
