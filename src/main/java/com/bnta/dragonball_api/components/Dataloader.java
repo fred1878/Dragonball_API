@@ -82,6 +82,19 @@ public class Dataloader implements ApplicationRunner {
         Technique fusion = new Technique("Fusion","Transformation");
         Technique fusionDance = new Technique("Fusion Dance","Transformation");
         Technique lariat = new Technique("Lariat","Rush"); //Broly & Kale
+        Technique fullPowerEnergyWave = new Technique("Full Power Energy Wave", "Energy Wave");
+        Technique highSpeedRush = new Technique("High Speed Rush", "Rush Attack");
+        Technique fullPowerCharge = new Technique("Full Power Charge", "Power Up");
+        Technique explosiveWave = new Technique("Explosive Wave", "Energy Shield");
+        Technique fullPowerEnergyBall = new Technique("Full Power Energy Ball", "Energy Sphere");
+        Technique pumpUp = new Technique("Pump up", "Power Up");
+        Technique highPowerRush = new Technique("High Power Rush", "Rush Attack");
+        Technique superMouthBlast = new Technique("Super Mouth Blast", "Energy Wave");
+        Technique telekinesis = new Technique("Telekinesis", "Restraining");
+        Technique psychicRockThrow = new Technique("Psychic Rock Throw", "Telekinesis");
+        Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
+        Technique dodonRay = new Technique("Dodon Ray", "Beam"); // Tien, ....
+
         // Goku Techniques
         Technique powerPole = new Technique("Power pole", "Rush"); //early goku
         Technique triBeam = new Technique("Tri-Beam", "Beam"); //Tien
@@ -95,12 +108,11 @@ public class Dataloader implements ApplicationRunner {
         // Cells Techniques
         Technique absorption = new Technique("Absorption","Support");
         // Tien Techniques
-        Technique dodonRay = new Technique("Dodon Ray", "Beam");
         Technique fourWitches = new Technique("Four Witches","Rush");
         // Piccolo Techniques
         Technique demonHand = new Technique("Demon Hand","Rush");
         Technique specialBeamCannon = new Technique("Special Beam Cannon","Beam");
-        Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
+
         // Master Roshi Techniques
         Technique drunkenFist = new Technique("Drunken Fists","Rush");
         Technique thunderShockSurprise = new Technique("Thunder Shock Surprise","Beam");
@@ -172,6 +184,14 @@ public class Dataloader implements ApplicationRunner {
         Technique greatApe = new Technique("Great Ape", "Transformation"); // kid Goku in dragon ball
         Technique maxPower = new Technique("Max Power", "Transformation"); // Master Roshi
 
+        //Chiaotzu Technique
+        Technique farewellMrTien = new Technique("Farewell, Mr. Tien",  "Self Destruction");
+
+        //Saibaman Technique
+        Technique saibamenBomb = new Technique("Saibamen Bomb", "Self Destruction");
+        Technique acid = new Technique("Acid", "Rush Attack");
+
+
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4, powerPole,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, triBeam, bestHeadbutt, destructoDisc,
                 scatteringBullet, doubletsuibikidan, solarFlare, lucoraGun, bigBangAttack, finalImapct, bodyManipulation,
@@ -181,7 +201,9 @@ public class Dataloader implements ApplicationRunner {
                 hellsFlash, machineImpact, hellBreaker, fusion, fusionDance, volcanoExplosion, saturdayCrush, behindYou,
                 begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken,
                 imperfectForm, semiPerfectForm, perfectForm, superPerfectForm, firstForm, secondForm, thirdForm, finalForm, finalForm100, greatSaiyaman,
-                potaraVegito, greatApe, maxPower, selfDestructDevice, eighterAttack, craneStyleAssassinStrike, pressurePointAttack));
+                potaraVegito, greatApe, maxPower, selfDestructDevice, eighterAttack, craneStyleAssassinStrike, pressurePointAttack,
+                fullPowerEnergyWave, highSpeedRush,fullPowerCharge, explosiveWave, fullPowerEnergyBall, pumpUp, highPowerRush, superMouthBlast,
+                telekinesis, psychicRockThrow, farewellMrTien, saibamenBomb, acid));
 
         //Dragon ball - Son Goku Characters
         Person gokuSonGokuSaga = new Person(Series.DragonBall, "Goku", 13, "Planet Vegeta",
@@ -278,22 +300,22 @@ public class Dataloader implements ApplicationRunner {
 
         // Dragon ball Z - Saiyan saga
         Person saibamanSaiyanSaga = new Person(Series.DragonBall_Z, "Saibaman", 0, "Planet Vegeta", "Alien",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(acid, afterImage, fullPowerEnergyWave, highSpeedRush, saibamenBomb));
 
         Person yajirobeSaiyanSaga = new Person(Series.DragonBall_Z, "Yajirobe", 26, "Earth", "Human",
                 saiyanSaga, Arrays.asList());
 
-        Person gohanSaiyanSaga = new Person(Series.DragonBall_Z, "Gohan", 4, "Earth", "Saiyan/Human",
-                saiyanSaga, Arrays.asList());
+        Person gohanSaiyanSaga = new Person(Series.DragonBall_Z, "Kid Gohan", 4, "Earth", "Saiyan/Human",
+                saiyanSaga, Arrays.asList(fullPowerCharge, explosiveWave, fullPowerEnergyBall, highSpeedRush, masenko));
 
         Person bulmaSaiyanSaga = new Person(Series.DragonBall_Z, "Bulma", 28, "Earth", "Human",
                 saiyanSaga, Arrays.asList());
 
         Person nappaSaiyanSaga = new Person(Series.DragonBall_Z, "Nappa", 50, "Planet Vegeta", "Saiyan",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(pumpUp, fullPowerCharge, fullPowerEnergyWave, highPowerRush, superMouthBlast, volcanoExplosion));
 
         Person chiaotzuSaiyanSaga = new Person(Series.DragonBall_Z, "Chiaotzu", 23, "Earth", "Human",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(telekinesis, fullPowerCharge, dodonRay, psychicRockThrow, farewellMrTien));
 
         Person raditzSaiyanSaga = new Person(Series.DragonBall_Z, "Raditz", 29, "Planet Vegeta", "Saiyan",
                 saiyanSaga, Arrays.asList());
