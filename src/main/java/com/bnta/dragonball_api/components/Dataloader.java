@@ -323,24 +323,24 @@ public class Dataloader implements ApplicationRunner {
                 "Human", cellSaga, Arrays.asList());
 
         Person trunksCellSaga = new Person(Series.DragonBall_Z, "Trunks", 1, "Earth",
-                "Human/Saiyan", cellSaga, Arrays.asList());
+                "Saiyan/Human", cellSaga, Arrays.asList());
 
         //Majin Buu Saga
         Person gokuMajinBuuSaga = new Person(Series.DragonBall_Z, "Goku", 37, "Planet Vegeta",
                 "Saiyan", majinBuuSaga, Arrays.asList());
         Person gotenMajinBuuSaga = new Person(Series.DragonBall_Z, "Goten", 7, "Earth",
-                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+                "Saiyan/Human", majinBuuSaga, Arrays.asList());
         Person trunksMajinBuuSaga = new Person(Series.DragonBall_Z, "Trunks", 8, "Earth",
-                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+                "Saiyan/Human", majinBuuSaga, Arrays.asList());
         Person gotenksMajibBuuSaga = new Person(Series.DragonBall_Z, "Gotenks", 8, "Earth",
-                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+                "Saiyan/Human", majinBuuSaga, Arrays.asList());
         Person majinBuu = new Person(Series.DragonBall_Z, "Majin Buu", 5000000, "Earth",
                 "Majin/Core Person", majinBuuSaga, Arrays.asList());
         //Search for Babidi's planet
         Person babidi = new Person(Series.DragonBall_Z, "Babidi", 5000000, "?",
                 "Babidis race - Alien Type", majinBuuSaga, Arrays.asList());
         Person gohanMajinBuuSaga = new Person(Series.DragonBall_Z, "Gohan", 17, "Earth",
-                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+                "Saiyan/Human", majinBuuSaga, Arrays.asList());
         Person mrSatanMajinBuuSaga = new Person(Series.DragonBall_Z, "Mr Satan", 38, "Earth",
                 "Human", majinBuuSaga, Arrays.asList());
 
