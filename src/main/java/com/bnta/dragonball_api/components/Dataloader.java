@@ -73,63 +73,83 @@ public class Dataloader implements ApplicationRunner {
                                              godsOfTheUniverseSaga, zenoSaga,
                                              grandTourSaga));
 
-        Technique flight = new Technique("Flight","Movement"); //Anyone with ki
-        Technique kamehameha = new Technique("Kamehameha", "Beam"); //Loads
-        Technique galickGun = new Technique("Galick Gun", "Beam"); //Vegeta
-        Technique instantTransmission = new Technique("Instant Transmission", "Teleportation"); //Like everyone
+        // Shared Techniques
+        Technique flight = new Technique("Flight","Movement");
+        Technique kamehameha = new Technique("Kamehameha", "Beam");
+        Technique instantTransmission = new Technique("Instant Transmission", "Teleportation");
+        Technique spiritBomb = new Technique("Spirit Bomb","Energy Sphere"); //Cell, Goku
+        Technique eyeLaser = new Technique("Eye Laser","Beam"); //Cell (And loads of others...)
+        Technique afterImage = new Technique("Afterimage","Movement");
+        Technique fusion = new Technique("Fusion","Transformation");
+        Technique fusionDance = new Technique("Fusion Dance","Transformation");
+        Technique lariat = new Technique("Lariat","Rush"); //Broly & Kale
+        // Goku Techniques
+        Technique powerPole = new Technique("Power pole", "Rush"); //early goku
+        Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku from saiyan sage onwards
+        // Gohan Techniques
+        Technique leaveMyDaddyAlone = new Technique("Leave My Daddy Alone!","Rush"); //Gohan (Very young)
+        Technique hiddenPotential = new Technique("Hidden Potential","Beam"); //Gohan (Very young)
+        // Bardock
+        Technique rebellionSpear = new Technique("Rebellion Spear","Rush");
+        Technique finalSpiritCannon = new Technique("Final Spirit Cannon","Beam/Energy Sphere");
+        // Cells Techniques
+        Technique absorption = new Technique("Absorption","Support");
+        // Tien Techniques
+        Technique dodonRay = new Technique("Dodon Ray", "Beam");
+        Technique fourWitches = new Technique("Four Witches","Rush");
+        // Piccolo Techniques
+        Technique demonHand = new Technique("Demon Hand","Rush");
+        Technique specialBeamCannon = new Technique("Special Beam Cannon","Beam");
+        Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
+        // Master Roshi Techniques
+        Technique drunkenFist = new Technique("Drunken Fists","Rush");
+        Technique thunderShockSurprise = new Technique("Thunder Shock Surprise","Beam");
+        // Frieza Techniques
+        Technique deathBeam = new Technique("Death Beam", "Beam");
+        Technique deathCannon = new Technique("Death Cannon", "Beam");
+        Technique deathSaucer = new Technique("Death Saucer", "Disc");
+        Technique novaStrike = new Technique("Nova Strike", "Rush");
+        // Yamcha Techniques
+        Technique wolfFangFist = new Technique("Wolf Fang Fist","Rush");
+        Technique spiritBall = new Technique("Spirit Ball","Beam");
+        // Nappa Techniques
+        Technique volcanoExplosion = new Technique("Volcano Explosion","Exploding wave");
+        // Raditz Techniques
+        Technique saturdayCrush = new Technique("Saturday Crush","Energy Sphere");
+        Technique behindYou = new Technique("Behind You!","Rush");
+        Technique begone = new Technique("Begone!","Beam");
+        // Trunks Techniques
+        Technique doubleBuster = new Technique("Double Buster","Beam");
+        Technique busterCannon = new Technique("Buster Cannon","Beam");
+        Technique godBreak = new Technique("God Breaker","Beam");
+        // Krillin Techniques
+        Technique bestHeadbutt = new Technique("Best Headbutt","Rush");
+        Technique destructoDisc = new Technique("Destructo Disc","Disc");
+        Technique scatteringBullet = new Technique("Scattering Bullet","Bullet");
+        Technique doubletsuibikidan = new Technique("Double Tsuibikidan", "Beam");
+        Technique solarFlare = new Technique("Solar Flare","Supportive");
+        // Vegeta Techniques
+        Technique galickGun = new Technique("Galick Gun", "Beam");
+        Technique lucoraGun = new Technique("Lucora Gun","Continuous Energy Bullet");
+        Technique bigBangAttack = new Technique("Big Bang Attack","Beam");
+        Technique finalImapct = new Technique("Final Impact","Beam");
+        // Android Techniques
+        Technique hellsFlash = new Technique("Hells Flash","Beam"); //Android 16
+        Technique machineImpact = new Technique("Machine Impact","Beam"); //Android 16
+        Technique hellBreaker = new Technique("Hell Breaker","Beam"); //Android 17
+        Technique powerBlitz = new Technique("Power Blitz", "Beam"); //Android 18 and 17
+        // Ginuy Force Techniques
+        Technique bodyChange = new Technique("Body Change","Supportive"); //Captain Ginyu
+        // Buu Techniques
+        Technique bodyManipulation = new Technique("Body Manipulation","Rush"); //Kid Buu
+        Technique transfigurationBeam = new Technique("Transfiguration Beam","Beam"); //All buus?
+        // Broly Techniques
+        Technique eraserCannon = new Technique("Eraser Cannon","Beam"); //Broly
+        // Super Saiyan Transformations
         Technique SSJ1 = new Technique("Super Saiyan 1", "Transformation"); //Loads
         Technique SSJ2 = new Technique("Super Saiyan 2", "Transformation"); //Loads
         Technique SSJ3 = new Technique("Super Saiyan 3", "Transformation"); //Loads
         Technique SSJ4 = new Technique("Super Saiyan 4", "Transformation"); //Loads
-        Technique powerPole = new Technique("Power pole", "Rush"); //early goku
-        Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku from saiyan sage onwards
-        Technique powerBlitz = new Technique("Power Blitz", "Beam"); //Android 18 and 17
-        Technique deathBeam = new Technique("Death Beam", "Beam"); //Frieza
-        Technique deathCannon = new Technique("Death Cannon", "Beam"); //Frieza
-        Technique deathSaucer = new Technique("Death Saucer", "Disc"); //Frieza
-        Technique novaStrike = new Technique("Nova Strike", "Rush"); //Frieza
-        Technique bestHeadbutt = new Technique("Best Headbutt","Rush"); //Krillin
-        Technique destructoDisc = new Technique("Destructo Disc","Disc"); //Krillin
-        Technique scatteringBullet = new Technique("Scattering Bullet","Bullet"); //Krillin
-        Technique doubletsuibikidan = new Technique("Double Tsuibikidan", "Beam"); //Krillin
-        Technique solarFlare = new Technique("Solar Flare","Supportive"); //Krillin
-        Technique lucoraGun = new Technique("Lucora Gun","Continuous Energy Bullet"); //Vegeta
-        Technique bigBangAttack = new Technique("Big Bang Attack","Beam"); //Vegeta
-        Technique finalImapct = new Technique("Final Impact","Beam"); //Vegeta
-        Technique bodyManipulation = new Technique("Body Manipulation","Rush"); //Kid Buu
-        Technique transfigurationBeam = new Technique("Transfiguration Beam","Beam"); //All buus?
-        Technique demonHand = new Technique("Demon Hand","Rush"); //Piccolo
-        Technique specialBeamCannon = new Technique("Special Beam Cannon","Beam"); //Piccolo
-        Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
-        Technique doubleBuster = new Technique("Double Buster","Beam"); //Trunks
-        Technique busterCannon = new Technique("Buster Cannon","Beam"); //Trunks
-        Technique godBreak = new Technique("God Breaker","Beam"); //Trunks
-        Technique dodonRay = new Technique("Dodon Ray", "Beam"); //Tien
-        Technique fourWitches = new Technique("Four Witches","Rush"); //Tien
-        Technique leaveMyDaddyAlone = new Technique("Leave My Daddy Alone!","Rush"); //Gohan (Very young)
-        Technique hiddenPotential = new Technique("Hidden Potential","Beam"); //Gohan (Very young)
-        Technique afterImage = new Technique("Afterimage","Movement"); //Master Roshi (And like everyone...)
-        Technique drunkenFist = new Technique("Drunken Fists","Rush"); //Master Roshi
-        Technique thunderShockSurprise = new Technique("Thunder Shock Surprise","Beam"); //Master Roshi
-        Technique spiritBomb = new Technique("Spirit Bomb","Energy Sphere"); //Cell, Goku
-        Technique absorption = new Technique("Absorption","Support"); //Cell
-        Technique eyeLaser = new Technique("Eye Laser","Beam"); //Cell (And loads of others...)
-        Technique wolfFangFist = new Technique("Wolf Fang Fist","Rush"); //Yamcha
-        Technique spiritBall = new Technique("Spirit Ball","Beam"); //Yamcha
-        Technique eraserCannon = new Technique("Eraser Cannon","Beam"); //Broly
-        Technique lariat = new Technique("Lariat","Rush"); //Broly & Kale
-        Technique hellsFlash = new Technique("Hells Flash","Beam"); //Android 16
-        Technique machineImpact = new Technique("Machine Impact","Beam"); //Android 16
-        Technique hellBreaker = new Technique("Hell Breaker","Beam"); //Android 17
-        Technique fusion = new Technique("Fusion","Transformation"); //.... A lot
-        Technique fusionDance = new Technique("Fusion Dance","Transformation"); // .... A lot
-        Technique volcanoExplosion = new Technique("Volcano Explosion","Exploding wave"); //Nappa
-        Technique saturdayCrush = new Technique("Saturday Crush","Energy Sphere"); //Raditz
-        Technique behindYou = new Technique("Behind You!","Rush"); //Raditz
-        Technique begone = new Technique("Begone!","Beam"); //Raditz
-        Technique rebellionSpear = new Technique("Rebellion Spear","Rush"); //Bardock
-        Technique finalSpiritCannon = new Technique("Final Spirit Cannon","Beam/Energy Sphere"); //Bardock
-        Technique bodyChange = new Technique("Body Change","Supportive"); //Captain Ginyu
         // Cells Transformations
         Technique imperfectForm = new Technique("Imperfect Form", "Transformation");
         Technique semiPerfectForm = new Technique("Semi-Perfect Form", "Transformation");
@@ -146,10 +166,6 @@ public class Dataloader implements ApplicationRunner {
         Technique potaraVegito = new Technique("Potara: Vegito (w/Vegeta)", "Transformation"); //MajinBuusaga Goku
         Technique greatApe = new Technique("Great Ape", "Transformation"); // kid Goku in dragon ball
         Technique maxPower = new Technique("Max Power", "Transformation"); // Master Roshi
-
-
-
-
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4, powerPole,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, bestHeadbutt, destructoDisc,
