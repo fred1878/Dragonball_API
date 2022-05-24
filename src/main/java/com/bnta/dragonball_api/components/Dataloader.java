@@ -89,7 +89,7 @@ public class Dataloader implements ApplicationRunner {
         Technique bestHeadbutt = new Technique("Best Headbutt","Rush"); //Krillin
         Technique destructoDisc = new Technique("Destructo Disc","Disc"); //Krillin
         Technique scatteringBullet = new Technique("Scattering Bullet","Bullet"); //Krillin
-        Technique Doubletsuibikidan = new Technique("Double Tsuibikidan", "Beam"); //Krillin
+        Technique doubletsuibikidan = new Technique("Double Tsuibikidan", "Beam"); //Krillin
         Technique solarFlare = new Technique("Soalr Flare","Supportive"); //Krillin
         Technique lucoraGun = new Technique("Lucora Gun","Continuous Energy Bullet"); //Vegeta
         Technique bigBangAttack = new Technique("Big Bang Attack","Beam"); //Vegeta
@@ -110,7 +110,7 @@ public class Dataloader implements ApplicationRunner {
         Technique drunkenFist = new Technique("Drunken Fists","Rush"); //Master Roshi
         Technique thunderShockSurprise = new Technique("Thunder Shock Surprise","Beam"); //Master Roshi
         Technique spiritBomb = new Technique("Spirit Bomb","Energy Sphere"); //Cell, Goku
-        Technique absorption = new Technique("Absoption","Support"); //Cell
+        Technique absorption = new Technique("Absorption","Support"); //Cell
         Technique eyeLaser = new Technique("Eye Laser","Beam"); //Cell (And loads of others...)
         Technique wolfFangFist = new Technique("Wolf Fang Fist","Rush"); //Yamcha
         Technique spiritBall = new Technique("Spirit Ball","Beam"); //Yamcha
@@ -131,7 +131,7 @@ public class Dataloader implements ApplicationRunner {
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, bestHeadbutt, destructoDisc,
-                scatteringBullet, Doubletsuibikidan, solarFlare, lucoraGun, bigBangAttack, finalImapct, bodyManipulation,
+                scatteringBullet, doubletsuibikidan, solarFlare, lucoraGun, bigBangAttack, finalImapct, bodyManipulation,
                 transfigurationBeam, demonHand, specialBeamCannon, masenko, doubleBuster, busterCannon,
                 godBreak, dodonRay, fourWitches, leaveMyDaddyAlone, hiddenPotential, afterImage, drunkenFist,
                 thunderShockSurprise, spiritBomb, absorption, eyeLaser, wolfFangFist, spiritBall, eraserCannon, lariat,
