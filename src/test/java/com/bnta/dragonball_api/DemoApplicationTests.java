@@ -34,30 +34,30 @@ class DemoApplicationTests {
 
 	// Saga query tests
 	@Test
-	public void canFindByReleaseDateAfter(){
+	public void canFindSagaByReleaseDateAfter(){
 		List<Saga> found = sagaRepository.findByReleaseDateAfter(LocalDate.of(2005, 2 ,05 ));
 		assertThat(found.size()).isEqualTo(2);
 	}
 
 	@Test
-	public void canFindByNameContainingIgnoreCase(){
+	public void canFindSagaByNameContainingIgnoreCase(){
 		List<Saga> found = sagaRepository.findByNameContainingIgnoreCase("saga");
 		assertThat(found.size()).isEqualTo(10);
 	}
 
 	@Test
-	public void canFindBySeries(){
+	public void canSagaFindBySeries(){
 		List<Saga> found = sagaRepository.findBySeries(Series.DragonBall_Z);
 		assertThat(found.size()).isEqualTo(4);
 	}
 
 	@Test
-	public void canFindByPersonsName(){
+	public void canFindSagaByPersonsName(){
 		List<Saga> found = sagaRepository.findByPersonsName("Bulma");
 		assertThat(found.size()).isEqualTo(3);
 	}
 
-	// For person
+	// Person query tests
 	@Test
 	public void canFindByPersonNameContainingIgnoreCase(){
 		List<Person> found = personRepository.findByNameContainingIgnoreCase("trunks");
@@ -65,19 +65,19 @@ class DemoApplicationTests {
 	}
 
 	@Test
-	public void canFindByPlanetContainingIgnoreCase(){
+	public void canFindPersonByPlanetContainingIgnoreCase(){
 		List<Person> found = personRepository.findByPlanetContainingIgnoreCase("Namek");
 		assertThat(found.size()).isEqualTo(7);
 	}
 
 	@Test
-	public void canFindByAgeGreaterThan(){
+	public void canFindPersonByAgeGreaterThan(){
 		List<Person> found = personRepository.findByAgeGreaterThan(50);
 		assertThat(found.size()).isEqualTo(6);
 	}
 
 	@Test
-	public void canFindByRaceIgnoreCase(){
+	public void canFindPersonByRaceIgnoreCase(){
 		List<Person> found = personRepository.findByRaceContainingIgnoreCase("namekian");
 		assertThat(found.size()).isEqualTo(7);
 	}
@@ -88,6 +88,22 @@ class DemoApplicationTests {
 		assertThat(found.size()).isEqualTo(13);
 	}
 
+	// Technique query tests
+	@Test
+	public void canFindTechniqueByNameContainingIgnoreCase(){
+		List<Technique> found = techniqueRepository.findByNameContainingIgnoreCase("Kamehameha");
+		assertThat(found.size()).isEqualTo(1);
+	}
 
+	@Test
+	public void canFindTechniqueByTypeContainingIgnoreCase(){
+		List<Technique> found = techniqueRepository.findByTypeContainingIgnoreCase("Rush");
+		assertThat(found.size()).isEqualTo(11);
+	}
 
+	@Test
+	public void canFindTechniqueByPersonName(){
+		List<Technique> found = techniqueRepository.findByPersonsName("Goku");
+		assertThat(found.size()).isEqualTo(2);
+	}
 }

@@ -371,7 +371,7 @@ public class Dataloader implements ApplicationRunner {
         Person majinBuu = new Person(Series.DragonBall_Z, "Majin Buu", 5000000, "Earth",
                 "Majin/Core Person", majinBuuSaga, Arrays.asList());
         //Search for Babidi's planet
-        Person babidi = new Person(Series.DragonBall_Z, "Babidi", 5000000, "?",
+        Person babidi = new Person(Series.DragonBall_Z, "Babidi", 5000000, "Unknown",
                 "Babidis race - Alien Type", majinBuuSaga, Arrays.asList());
         Person gohanMajinBuuSaga = new Person(Series.DragonBall_Z, "Gohan", 17, "Earth",
                 "Saiyan/Human", majinBuuSaga, Arrays.asList());
