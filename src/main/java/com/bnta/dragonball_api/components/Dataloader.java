@@ -13,6 +13,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 @Component
@@ -138,10 +139,21 @@ public class Dataloader implements ApplicationRunner {
                 hellsFlash, machineImpact, hellBreaker, fusion, fusionDance, volcanoExplosion, saturdayCrush, behindYou,
                 begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken));
 
-        //Dragon ball - 
-
-
-
+        //Dragon ball - Son Goku Characters
+        Person gokuSonGokuSaga = new Person(Series.DragonBall, "Goku", 13, "Planet Vegeta",
+                "Saiyan", sonGokuSaga, Arrays.asList());
+        Person krillinSonGokuSaga = new Person(Series.DragonBall, "Krillin", 14, "Earth",
+                "Human", sonGokuSaga, Arrays.asList());
+        Person yamchaSonGokuSaga = new Person(Series.DragonBall, "Yamcha", 17, "Earth",
+                "Human", sonGokuSaga, Arrays.asList());
+        Person roshiSonGokuSaga = new Person(Series.DragonBall, "Master Roshi", 320, "Earth",
+                "Human", sonGokuSaga,Arrays.asList());
+        Person launchSonGokuSaga = new Person(Series.DragonBall, "Launch", 17, "Earth",
+                "Human", sonGokuSaga, Arrays.asList());
+        Person namSonGokuSaga = new Person(Series.DragonBall, "Nam", 29, "Earth",
+                "Human", sonGokuSaga, Arrays.asList());
+        Person giranSonGokuSaga = new Person(Series.DragonBall, "Giran", 33, "Unkown",
+                "Giras", sonGokuSaga, Arrays.asList());
 
         // Dragon ball  - Piccolo saga characters
         Person yamcha = new Person(Series.DragonBall, "Yamcha", 23, "Earth",
