@@ -13,6 +13,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 @Component
@@ -80,7 +81,7 @@ public class Dataloader implements ApplicationRunner {
         Technique SSJ2 = new Technique("Super Saiyan 2", "Transformation"); //Loads
         Technique SSJ3 = new Technique("Super Saiyan 3", "Transformation"); //Loads
         Technique SSJ4 = new Technique("Super Saiyan 4", "Transformation"); //Loads
-        Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku
+        Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku from saiyan sage onwards
         Technique powerBlitz = new Technique("Power Blitz", "Beam"); //Android 18 and 17
         Technique deathBeam = new Technique("Death Beam", "Beam"); //Frieza
         Technique deathCannon = new Technique("Death Cannon", "Beam"); //Frieza
@@ -128,6 +129,26 @@ public class Dataloader implements ApplicationRunner {
         Technique rebellionSpear = new Technique("Rebellion Spear","Rush"); //Bardock
         Technique finalSpiritCannon = new Technique("Final Spirit Cannon","Beam/Energy Sphere"); //Bardock
         Technique bodyChange = new Technique("Body Change","Supportive"); //Captain Ginyu
+        // Cells Transformations
+        Technique imperfectForm = new Technique("Imperfect Form", "Transformation");
+        Technique semiPerfectForm = new Technique("Semi-Perfect Form", "Transformation");
+        Technique perfectForm = new Technique("Perfect Form", "Transformation");
+        Technique superPerfectForm = new Technique("Super Perfect Form", "Transformation");
+        // Frieza Transformations
+        Technique firstForm = new Technique("First Form", "Transformation");
+        Technique secondForm = new Technique("Second Form", "Transformation");
+        Technique thirdForm = new Technique("Third Form", "Transformation");
+        Technique finalForm = new Technique("Final Form", "Transformation");
+        Technique finalForm100 = new Technique("100% Final Form", "Transformation");
+        //
+        Technique greatSaiyaman = new Technique("Great Saiyaman", "Transformation"); // MajinBuusaga Gohan
+        Technique potaraVegito = new Technique("Potara: Vegito (w/Vegeta)", "Transformation"); //MajinBuusaga Goku
+        Technique greatApe = new Technique("Great Ape", "Transformation"); // kid Goku in dragon ball
+        Technique maxPower = new Technique("Max Power", "Transformation"); // Master Roshi
+
+
+
+
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, bestHeadbutt, destructoDisc,
@@ -136,12 +157,25 @@ public class Dataloader implements ApplicationRunner {
                 godBreak, dodonRay, fourWitches, leaveMyDaddyAlone, hiddenPotential, afterImage, drunkenFist,
                 thunderShockSurprise, spiritBomb, absorption, eyeLaser, wolfFangFist, spiritBall, eraserCannon, lariat,
                 hellsFlash, machineImpact, hellBreaker, fusion, fusionDance, volcanoExplosion, saturdayCrush, behindYou,
-                begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken));
+                begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken,
+                imperfectForm, semiPerfectForm, perfectForm, superPerfectForm, firstForm, secondForm, thirdForm, finalForm, finalForm100, greatSaiyaman,
+                potaraVegito, greatApe, maxPower));
 
-        //Dragon ball - 
-
-
-
+        //Dragon ball - Son Goku Characters
+        Person gokuSonGokuSaga = new Person(Series.DragonBall, "Goku", 13, "Planet Vegeta",
+                "Saiyan", sonGokuSaga, Arrays.asList());
+        Person krillinSonGokuSaga = new Person(Series.DragonBall, "Krillin", 14, "Earth",
+                "Human", sonGokuSaga, Arrays.asList());
+        Person yamchaSonGokuSaga = new Person(Series.DragonBall, "Yamcha", 17, "Earth",
+                "Human", sonGokuSaga, Arrays.asList());
+        Person roshiSonGokuSaga = new Person(Series.DragonBall, "Master Roshi", 320, "Earth",
+                "Human", sonGokuSaga,Arrays.asList());
+        Person launchSonGokuSaga = new Person(Series.DragonBall, "Launch", 17, "Earth",
+                "Human", sonGokuSaga, Arrays.asList());
+        Person namSonGokuSaga = new Person(Series.DragonBall, "Nam", 29, "Earth",
+                "Human", sonGokuSaga, Arrays.asList());
+        Person giranSonGokuSaga = new Person(Series.DragonBall, "Giran", 33, "Unkown",
+                "Giras", sonGokuSaga, Arrays.asList());
 
         // Dragon ball  - Piccolo saga characters
         Person yamcha = new Person(Series.DragonBall, "Yamcha", 23, "Earth",
@@ -323,31 +357,32 @@ public class Dataloader implements ApplicationRunner {
                 "Human", cellSaga, Arrays.asList());
 
         Person trunksCellSaga = new Person(Series.DragonBall_Z, "Trunks", 1, "Earth",
-                "Human/Saiyan", cellSaga, Arrays.asList());
+                "Saiyan/Human", cellSaga, Arrays.asList());
 
         //Majin Buu Saga
         Person gokuMajinBuuSaga = new Person(Series.DragonBall_Z, "Goku", 37, "Planet Vegeta",
                 "Saiyan", majinBuuSaga, Arrays.asList());
         Person gotenMajinBuuSaga = new Person(Series.DragonBall_Z, "Goten", 7, "Earth",
-                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+                "Saiyan/Human", majinBuuSaga, Arrays.asList());
         Person trunksMajinBuuSaga = new Person(Series.DragonBall_Z, "Trunks", 8, "Earth",
-                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+                "Saiyan/Human", majinBuuSaga, Arrays.asList());
         Person gotenksMajibBuuSaga = new Person(Series.DragonBall_Z, "Gotenks", 8, "Earth",
-                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+                "Saiyan/Human", majinBuuSaga, Arrays.asList());
         Person majinBuu = new Person(Series.DragonBall_Z, "Majin Buu", 5000000, "Earth",
                 "Majin/Core Person", majinBuuSaga, Arrays.asList());
         //Search for Babidi's planet
         Person babidi = new Person(Series.DragonBall_Z, "Babidi", 5000000, "?",
                 "Babidis race - Alien Type", majinBuuSaga, Arrays.asList());
         Person gohanMajinBuuSaga = new Person(Series.DragonBall_Z, "Gohan", 17, "Earth",
-                "Human/Saiyan", majinBuuSaga, Arrays.asList());
+                "Saiyan/Human", majinBuuSaga, Arrays.asList());
         Person mrSatanMajinBuuSaga = new Person(Series.DragonBall_Z, "Mr Satan", 38, "Earth",
                 "Human", majinBuuSaga, Arrays.asList());
 
         personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, piccolo, goku, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi, krillinPiccoloSaga,
                                                     saibamanSaiyanSaga, yajirobeSaiyanSaga, gohanSaiyanSaga, bulmaSaiyanSaga, nappaSaiyanSaga, chiaotzuSaiyanSaga, raditzSaiyanSaga, masterRoshiSaiyanSaga, yamchaSaiyanSaga, tienSaiyanSaga, vegetaSaiyanSaga, gokuSaiyanSaga, kingKaiSaiyanSaga, piccoloSaiyanSaga, krillinSaiyanSaga,
                                                     krillinFriezaSaga, yajirobeFriezaSaga, dendeFriezaSaga, gohanFriezaSaga, piccoloFriezaSaga, kingKaiFriezaSaga, bulmaFriezaSaga, recoome, burter, jeice, guldo, captainGinyu, zarbon, gokuFriezaSaga, vegetaFriezaSaga,
-                                                    teenGohan, vegetaCellSaga, futureTrunks, cell, gokuCellSaga, android18, android16, krillinCellSaga, piccoloCellSaga, tienCellSaga, dendeCellSaga, mrPopoCellSaga, chiaotzuCellSaga, trunksCellSaga));
+                                                    teenGohan, vegetaCellSaga, futureTrunks, cell, gokuCellSaga, android18, android16, krillinCellSaga, piccoloCellSaga, tienCellSaga, dendeCellSaga, mrPopoCellSaga, chiaotzuCellSaga, trunksCellSaga,
+                                                    gokuMajinBuuSaga, gotenMajinBuuSaga, trunksMajinBuuSaga, gotenksMajibBuuSaga, majinBuu, babidi, gohanMajinBuuSaga, mrSatanMajinBuuSaga));
 
     }
 
