@@ -138,6 +138,11 @@ public class Dataloader implements ApplicationRunner {
                 hellsFlash, machineImpact, hellBreaker, fusion, fusionDance, volcanoExplosion, saturdayCrush, behindYou,
                 begone, rebellionSpear, finalSpiritCannon, bodyChange, flight, kaioken));
 
+        //Dragon ball - 
+
+
+
+
         // Dragon ball  - Piccolo saga characters
         Person yamcha = new Person(Series.DragonBall, "Yamcha", 23, "Earth",
                 "Human",
@@ -177,8 +182,58 @@ public class Dataloader implements ApplicationRunner {
         Person masterRoshi = new Person(Series.DragonBall, "Master Roshi", 326, "Earth", "Human", piccoloSaga,
                 Arrays.asList());
 
-        Person krillinPiccoloSaga= new Person(Series.DragonBall, "Krillen", 20, "Earth",
+        Person krillinPiccoloSaga= new Person(Series.DragonBall, "Krillin", 20, "Earth",
                 "Human", piccoloSaga, Arrays.asList());
+
+        // Dragon ball Z - Saiyan saga
+        Person saibamanSaiyanSaga = new Person(Series.DragonBall_Z, "Saibaman", 0, "Planet Vegeta", "Alien",
+                saiyanSaga, Arrays.asList());
+
+        Person yajirobeSaiyanSaga = new Person(Series.DragonBall_Z, "Yajirobe", 26, "Earth", "Human",
+                saiyanSaga, Arrays.asList());
+
+        Person gohanSaiyanSaga = new Person(Series.DragonBall_Z, "Gohan", 4, "Earth", "Saiyan/Human",
+                saiyanSaga, Arrays.asList());
+
+        Person bulmaSaiyanSaga = new Person(Series.DragonBall_Z, "Bulma", 28, "Earth", "Human",
+                saiyanSaga, Arrays.asList());
+
+        Person nappaSaiyanSaga = new Person(Series.DragonBall_Z, "Nappa", 50, "Planet Vegeta", "Saiyan",
+                saiyanSaga, Arrays.asList());
+
+        Person chiaotzuSaiyanSaga = new Person(Series.DragonBall_Z, "Chiaotzu", 23, "Earth", "Human",
+                saiyanSaga, Arrays.asList());
+
+        Person raditzSaiyanSaga = new Person(Series.DragonBall_Z, "Raditz", 29, "Planet Vegeta", "Saiyan",
+                saiyanSaga, Arrays.asList());
+
+        Person masterRoshiSaiyanSaga = new Person(Series.DragonBall_Z, "Master Roshi", 331, "Earth", "Human",
+                saiyanSaga, Arrays.asList());
+
+        Person yamchaSaiyanSaga = new Person(Series.DragonBall_Z, "Yamcha", 28, "Earth", "Human",
+                saiyanSaga, Arrays.asList());
+
+        Person tienSaiyanSaga = new Person(Series.DragonBall_Z, "Tien Shinhan", 28, "Earth", "Earthling/Cyclops",
+                saiyanSaga, Arrays.asList());
+
+        Person vegetaSaiyanSaga = new Person(Series.DragonBall_Z, "Vegeta", 29, "Planet Vegeta", "Saiyan",
+                saiyanSaga, Arrays.asList());
+
+        Person gokuSaiyanSaga = new Person(Series.DragonBall_Z, "Goku", 24, "Planet Vegeta", "Saiyan",
+                saiyanSaga, Arrays.asList());
+
+        Person kingKaiSaiyanSaga = new Person(Series.DragonBall_Z, "King Kai", 0, "King Kai's Planet", "Core Person",
+                saiyanSaga, Arrays.asList());
+
+        Person piccoloSaiyanSaga = new Person(Series.DragonBall_Z, "Piccolo", 8, "Namek", "Namekian",
+                saiyanSaga, Arrays.asList());
+
+        Person krillinSaiyanSaga = new Person(Series.DragonBall_Z, "Krillin", 25, "Earth", "Human",
+                saiyanSaga, Arrays.asList());
+
+
+
+
 
 
 
@@ -277,6 +332,7 @@ public class Dataloader implements ApplicationRunner {
                 "Human/Saiyan", cellSaga, Arrays.asList());
 
         personRepository.saveAll(Arrays.asList(yamcha, bulma, chiChi, piccolo, goku, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi, krillinPiccoloSaga,
+                                                    saibamanSaiyanSaga, yajirobeSaiyanSaga, gohanSaiyanSaga, bulmaSaiyanSaga, nappaSaiyanSaga, chiaotzuSaiyanSaga, raditzSaiyanSaga, masterRoshiSaiyanSaga, yamchaSaiyanSaga, tienSaiyanSaga, vegetaSaiyanSaga, gokuSaiyanSaga, kingKaiSaiyanSaga, piccoloSaiyanSaga, krillinSaiyanSaga,
                                                     krillinFriezaSaga, yajirobeFriezaSaga, dendeFriezaSaga, gohanFriezaSaga, piccoloFriezaSaga, kingKaiFriezaSaga, bulmaFriezaSaga, recoome, burter, jeice, guldo, captainGinyu, zarbon, gokuFriezaSaga, vegetaFriezaSaga,
                                                     teenGohan, vegetaCellSaga, futureTrunks, cell, gokuCellSaga, android18, android16, krillinCellSaga, piccoloCellSaga, tienCellSaga, dendeCellSaga, mrPopoCellSaga, chiaotzuCellSaga, trunksCellSaga));
 
