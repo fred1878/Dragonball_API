@@ -172,14 +172,6 @@ public class SagaController {
         return new ResponseEntity<>(sagaRepository.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/search") //localhost:8080/sagas/1
-    public ResponseEntity<Optional<Saga>> getSaga(@RequestParam(name = "personName", required = false) String personName){
-        if(personName != null) {
-            return new ResponseEntity(sagaRepository.findByPersonsName(personName),HttpStatus.OK);
-        }
-        return new ResponseEntity(personName,HttpStatus.OK);
-    }
-
     //SHOW
     @GetMapping(value = "/{id}") //localhost:8080/sagas/1
     public ResponseEntity<Optional<Saga>> getSaga(@PathVariable Long id){
