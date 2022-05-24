@@ -81,6 +81,7 @@ public class Dataloader implements ApplicationRunner {
         Technique SSJ2 = new Technique("Super Saiyan 2", "Transformation"); //Loads
         Technique SSJ3 = new Technique("Super Saiyan 3", "Transformation"); //Loads
         Technique SSJ4 = new Technique("Super Saiyan 4", "Transformation"); //Loads
+        Technique powerPole = new Technique("Power pole", "Rush"); //early goku
         Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku from saiyan sage onwards
         Technique powerBlitz = new Technique("Power Blitz", "Beam"); //Android 18 and 17
         Technique deathBeam = new Technique("Death Beam", "Beam"); //Frieza
@@ -150,7 +151,7 @@ public class Dataloader implements ApplicationRunner {
 
 
 
-        techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4,
+        techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4, powerPole,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, bestHeadbutt, destructoDisc,
                 scatteringBullet, doubletsuibikidan, solarFlare, lucoraGun, bigBangAttack, finalImapct, bodyManipulation,
                 transfigurationBeam, demonHand, specialBeamCannon, masenko, doubleBuster, busterCannon,
@@ -163,13 +164,17 @@ public class Dataloader implements ApplicationRunner {
 
         //Dragon ball - Son Goku Characters
         Person gokuSonGokuSaga = new Person(Series.DragonBall, "Goku", 13, "Planet Vegeta",
+                "Saiyan", sonGokuSaga, Arrays.asList(powerPole,kamehameha));
+        Person bulmaSonGokuSaga = new Person(Series.DragonBall, "Bulma", 16, "Earth",
+                "Saiyan", sonGokuSaga, Arrays.asList());
+        Person chichiSonGokuSaga = new Person(Series.DragonBall, "Chi-Chi", 12, "Earth",
                 "Saiyan", sonGokuSaga, Arrays.asList());
         Person krillinSonGokuSaga = new Person(Series.DragonBall, "Krillin", 14, "Earth",
                 "Human", sonGokuSaga, Arrays.asList());
         Person yamchaSonGokuSaga = new Person(Series.DragonBall, "Yamcha", 17, "Earth",
-                "Human", sonGokuSaga, Arrays.asList());
+                "Human", sonGokuSaga, Arrays.asList(wolfFangFist));
         Person roshiSonGokuSaga = new Person(Series.DragonBall, "Master Roshi", 320, "Earth",
-                "Human", sonGokuSaga,Arrays.asList());
+                "Human", sonGokuSaga,Arrays.asList(kamehameha));
         Person launchSonGokuSaga = new Person(Series.DragonBall, "Launch", 17, "Earth",
                 "Human", sonGokuSaga, Arrays.asList());
         Person namSonGokuSaga = new Person(Series.DragonBall, "Nam", 29, "Earth",
