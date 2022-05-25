@@ -27,6 +27,8 @@ public class Dataloader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        
+        // Comment TO REMOVE
 
         //Dragon ball sagas
         Saga sonGokuSaga = new Saga("Son Goku Saga", Series.DragonBall, "1 - 28",
