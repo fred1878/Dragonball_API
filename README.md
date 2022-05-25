@@ -55,6 +55,13 @@ To POST to an endpoint use localhost:8080/{endpoint} and pass in JSON data, if t
 To PUT(update) an element use local host:8080/{endpoint}/{id} and pass in JSON data, if there is no element with that id an exception will be thrown<br>
 To DELETE an element use localhost:8080/{endpoint}/{id} if there is no element with that id an exception will be thrown<br>
 
+## Tests
+
+Tests have been created for all queries <br> 
+Below shows examples of tests used for all queries relating to the "persons" route
+
+<img src="images/personQueryTests.png" width="500">
+
 ## Dependencies
 
 Junit and assertj for testing.<br>
