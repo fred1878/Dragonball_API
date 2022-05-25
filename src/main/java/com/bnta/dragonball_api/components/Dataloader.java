@@ -27,6 +27,8 @@ public class Dataloader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        
+        // Comment TO REMOVE
 
         //Dragon ball sagas
         Saga sonGokuSaga = new Saga("Son Goku Saga", Series.DragonBall, "1 - 28",
@@ -94,14 +96,33 @@ public class Dataloader implements ApplicationRunner {
         Technique psychicRockThrow = new Technique("Psychic Rock Throw", "Telekinesis");
         Technique masenko = new Technique("Masenko","Beam"); //Piccolo, Gohan ...
         Technique dodonRay = new Technique("Dodon Ray", "Beam"); // Tien, ....
+        //
+        Technique fullPower = new Technique("Full Power", "Power up");
+        Technique fullPowerEnergyBlastVolley = new Technique("Full Power Energy Blast Volley", "Continuous Energy Blast" );
+        Technique kiBlastCannon = new Technique("Ki Blast Cannon", "Energy Wave");
+        Technique superExplosiveWave = new Technique("Super Explosive Wave", "Explosive Wave");
+        Technique antennaBeam = new Technique("Antenna Beam", "Eneryg Wave");
+        Technique explosiveDemonWave = new Technique("Explosive Demon Wave", "Energy Wave");
+        Technique stoneBullet = new Technique("Stone Bullet", "projectile");
+        Technique giganticRockThrow = new Technique("Gigantic Rock Throw", "Offensive");
+        Technique hikou = new Technique("Hikou", "Movement");
+        Technique rockPaperScissors = new Technique("Rock Paper Scissors","Rush");
+
+
+        // Yajirobe
+        Technique mircaleKaBlamSlash = new Technique("Miracle Ka-Blam Slash", "Rush Attack");
 
         // Goku Techniques
         Technique powerPole = new Technique("Power pole", "Rush"); //early goku
         Technique triBeam = new Technique("Tri-Beam", "Beam"); //Tien
         Technique kaioken = new Technique("Kaio-ken","Power Up"); //Goku from saiyan sage onwards
+        Technique kaiokenAttack = new Technique("Kaio-ken Attack","Rush Attack"); //Goku from saiyan sage onwards
         // Gohan Techniques
         Technique leaveMyDaddyAlone = new Technique("Leave My Daddy Alone!","Rush"); //Gohan (Very young)
         Technique hiddenPotential = new Technique("Hidden Potential","Beam"); //Gohan (Very young)
+        Technique gekiretsuMadan = new Technique("Gekiretsu Madan","Beam");
+        Technique masendan = new Technique("Masendan","Beam");
+        Technique wildRushBlaster = new Technique("Wild Rush Blaster","Beam");
         // Bardock
         Technique rebellionSpear = new Technique("Rebellion Spear","Rush");
         Technique finalSpiritCannon = new Technique("Final Spirit Cannon","Beam/Energy Sphere");
@@ -109,6 +130,8 @@ public class Dataloader implements ApplicationRunner {
         Technique absorption = new Technique("Absorption","Support");
         // Tien Techniques
         Technique fourWitches = new Technique("Four Witches","Rush");
+        Technique neoTriBeam = new Technique("Neo Tri-Beam", "Continuous Energy Bullet");
+
         // Piccolo Techniques
         Technique demonHand = new Technique("Demon Hand","Rush");
         Technique specialBeamCannon = new Technique("Special Beam Cannon","Beam");
@@ -116,6 +139,9 @@ public class Dataloader implements ApplicationRunner {
         // Master Roshi Techniques
         Technique drunkenFist = new Technique("Drunken Fists","Rush");
         Technique thunderShockSurprise = new Technique("Thunder Shock Surprise","Beam");
+        Technique theOriginalKamehameha = new Technique("The Original Kamehameha", "Energy Wave");
+
+
         // Frieza Techniques
         Technique deathBeam = new Technique("Death Beam", "Beam");
         Technique deathCannon = new Technique("Death Cannon", "Beam");
@@ -154,6 +180,7 @@ public class Dataloader implements ApplicationRunner {
         Technique eighterAttack = new Technique("Eighter Attck", "Rush"); //Android 8
         // Ginuy Force Techniques
         Technique bodyChange = new Technique("Body Change","Supportive"); //Captain Ginyu
+        Technique monsterForm = new Technique("Monster Form", "Transformation");
         // Buu Techniques
         Technique bodyManipulation = new Technique("Body Manipulation","Rush"); //Kid Buu
         Technique transfigurationBeam = new Technique("Transfiguration Beam","Beam"); //All buus?
@@ -191,6 +218,9 @@ public class Dataloader implements ApplicationRunner {
         Technique saibamenBomb = new Technique("Saibamen Bomb", "Self Destruction");
         Technique acid = new Technique("Acid", "Rush Attack");
 
+        //Dende Technique
+        Technique healing = new Technique("Healing","Support");
+
 
         techniqueRepository.saveAll(Arrays.asList(kamehameha, galickGun, instantTransmission, SSJ1, SSJ2 , SSJ3, SSJ4, powerPole,
                 powerBlitz, deathBeam, deathCannon, deathSaucer, novaStrike, triBeam, bestHeadbutt, destructoDisc,
@@ -203,7 +233,9 @@ public class Dataloader implements ApplicationRunner {
                 imperfectForm, semiPerfectForm, perfectForm, superPerfectForm, firstForm, secondForm, thirdForm, finalForm, finalForm100, greatSaiyaman,
                 potaraVegito, greatApe, maxPower, selfDestructDevice, eighterAttack, craneStyleAssassinStrike, pressurePointAttack,
                 fullPowerEnergyWave, highSpeedRush,fullPowerCharge, explosiveWave, fullPowerEnergyBall, pumpUp, highPowerRush, superMouthBlast,
-                telekinesis, psychicRockThrow, farewellMrTien, saibamenBomb, acid));
+                telekinesis, psychicRockThrow, farewellMrTien, saibamenBomb, acid, fullPower, fullPowerEnergyBlastVolley, theOriginalKamehameha, kiBlastCannon, neoTriBeam, superExplosiveWave,
+                kaiokenAttack, explosiveDemonWave, antennaBeam, mircaleKaBlamSlash, stoneBullet, giganticRockThrow, hikou,
+                rockPaperScissors, monsterForm, gekiretsuMadan, wildRushBlaster, masendan, healing));
 
         //Dragon ball - Son Goku Characters
         Person gokuSonGokuSaga = new Person(Series.DragonBall, "Goku", 13, "Planet Vegeta",
@@ -303,7 +335,7 @@ public class Dataloader implements ApplicationRunner {
                 saiyanSaga, Arrays.asList(acid, afterImage, fullPowerEnergyWave, highSpeedRush, saibamenBomb));
 
         Person yajirobeSaiyanSaga = new Person(Series.DragonBall_Z, "Yajirobe", 26, "Earth", "Human",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(stoneBullet, giganticRockThrow, hikou, mircaleKaBlamSlash));
 
         Person gohanSaiyanSaga = new Person(Series.DragonBall_Z, "Kid Gohan", 4, "Earth", "Saiyan/Human",
                 saiyanSaga, Arrays.asList(fullPowerCharge, explosiveWave, fullPowerEnergyBall, highSpeedRush, masenko));
@@ -318,44 +350,46 @@ public class Dataloader implements ApplicationRunner {
                 saiyanSaga, Arrays.asList(telekinesis, fullPowerCharge, dodonRay, psychicRockThrow, farewellMrTien));
 
         Person raditzSaiyanSaga = new Person(Series.DragonBall_Z, "Raditz", 29, "Planet Vegeta", "Saiyan",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(fullPower,explosiveWave, fullPowerEnergyBlastVolley, highPowerRush, fullPowerEnergyWave));
 
         Person masterRoshiSaiyanSaga = new Person(Series.DragonBall_Z, "Master Roshi", 331, "Earth", "Human",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(afterImage, pumpUp, theOriginalKamehameha, highSpeedRush,thunderShockSurprise));
 
         Person yamchaSaiyanSaga = new Person(Series.DragonBall_Z, "Yamcha", 28, "Earth", "Human",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(fullPowerCharge, afterImage, kamehameha, wolfFangFist, spiritBall));
 
         Person tienSaiyanSaga = new Person(Series.DragonBall_Z, "Tien Shinhan", 28, "Earth", "Earthling/Cyclops",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(solarFlare, afterImage, dodonRay,neoTriBeam));
 
         Person vegetaSaiyanSaga = new Person(Series.DragonBall_Z, "Vegeta", 29, "Planet Vegeta", "Saiyan",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(explosiveWave, fullPower, galickGun, fullPowerEnergyBlastVolley, superExplosiveWave ));
 
         Person gokuSaiyanSaga = new Person(Series.DragonBall_Z, "Goku", 24, "Planet Vegeta", "Saiyan",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(solarFlare, kaioken, kamehameha, kaiokenAttack));
 
         Person kingKaiSaiyanSaga = new Person(Series.DragonBall_Z, "King Kai", 0, "King Kai's Planet", "Core Person",
                 saiyanSaga, Arrays.asList());
 
         Person piccoloSaiyanSaga = new Person(Series.DragonBall_Z, "Piccolo", 8, "Namek", "Namekian",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(antennaBeam, fullPower, specialBeamCannon, explosiveDemonWave));
 
         Person krillinSaiyanSaga = new Person(Series.DragonBall_Z, "Krillin", 25, "Earth", "Human",
-                saiyanSaga, Arrays.asList());
+                saiyanSaga, Arrays.asList(solarFlare, afterImage, kamehameha, fullPowerEnergyBlastVolley, destructoDisc));
 
         // Dragon ball Z - Frieza saga
         Person krillinFriezaSaga = new Person(Series.DragonBall_Z, "Krillin", 26, "Earth",
-                "Human", friezaSaga, Arrays.asList());
+                "Human", friezaSaga, Arrays.asList(afterImage, destructoDisc, solarFlare,
+                bestHeadbutt, doubletsuibikidan));
 
         Person yajirobeFriezaSaga = new Person(Series.DragonBall_Z, "Yajirobe", 27, "Earth",
                 "Human", friezaSaga, Arrays.asList());
 
         Person dendeFriezaSaga = new Person(Series.DragonBall_Z, "Dende", 26, "Namek",
-                "Namekian", friezaSaga, Arrays.asList());
+                "Namekian", friezaSaga, Arrays.asList(healing));
 
         Person gohanFriezaSaga = new Person(Series.DragonBall_Z, "Gohan", 5, "Earth",
-                "Saiyan/Human", friezaSaga, Arrays.asList());
+                "Saiyan/Human", friezaSaga, Arrays.asList(masendan, leaveMyDaddyAlone, wildRushBlaster,
+                gekiretsuMadan));
 
         Person piccoloFriezaSaga = new Person(Series.DragonBall_Z, "Piccolo", 9, "Namek",
                 "Namekian", friezaSaga, Arrays.asList());
@@ -366,7 +400,7 @@ public class Dataloader implements ApplicationRunner {
         Person bulmaFriezaSaga = new Person(Series.DragonBall_Z, "Bulma", 29, "Earth",
                 "Human", friezaSaga, Arrays.asList());
 
-        // Frieza saga / Ginyu Forces members
+// Frieza saga / Ginyu Forces members
         Person recoome = new Person(Series.DragonBall_Z, "Recoome", 0, "Unknown",
                 "Alien", friezaSaga, Arrays.asList());
 
@@ -380,20 +414,21 @@ public class Dataloader implements ApplicationRunner {
                 "Boulean", friezaSaga, Arrays.asList());
 
         Person captainGinyu = new Person(Series.DragonBall_Z, "Captain Ginyu", 0, "Unknown",
-                "Alien", friezaSaga, Arrays.asList());
+                "Alien", friezaSaga, Arrays.asList(bodyChange));
 
         Person zarbon = new Person(Series.DragonBall_Z, "Zarbon", 0, "Unknown",
-                "Alien", friezaSaga, Arrays.asList());
+                "Alien", friezaSaga, Arrays.asList(monsterForm));
 
         Person gokuFriezaSaga = new Person(Series.DragonBall_Z, "Goku", 23, "Planet Vegeta",
                 "Saiyan",friezaSaga, Arrays.asList(kamehameha, SSJ1));
 
         Person vegetaFriezaSaga = new Person(Series.DragonBall_Z, "Vegeta", 29, "Planet Vegeta",
                 "Saiyan",
-                friezaSaga, Arrays.asList(galickGun));
+                friezaSaga, Arrays.asList(galickGun, lucoraGun));
 
         Person frieza = new Person(Series.DragonBall_Z, "Frieza", 32, "Unknown","Alien",
-                friezaSaga, Arrays.asList());
+                friezaSaga, Arrays.asList(firstForm, secondForm, thirdForm, finalForm, finalForm100, deathBeam,
+                deathCannon, deathSaucer, novaStrike));
 
         // Dragon ball Z - Cell saga
         Person teenGohan = new Person(Series.DragonBall_Z, "Teen Gohan", 10, "Earth",
@@ -460,7 +495,7 @@ public class Dataloader implements ApplicationRunner {
         personRepository.saveAll(Arrays.asList(gokuSonGokuSaga, bulmaSonGokuSaga, chichiSonGokuSaga,krillinSonGokuSaga,yamchaSonGokuSaga, roshiSonGokuSaga, launchSonGokuSaga, namSonGokuSaga, giranSonGokuSaga,boraRedRibbonArmySaga, android8RedRibbonArmySaga, generalBlue, bandagesTheMummy, masterRoshiRedRibbonArmySaga, akkumanRedRibbonArmySaga, mercenaryTaoRedRibbonArmySaga, korinRedRibbonArmySaga, kidGokuRedRibbonArmySaga, grandpaGohanRedRibbonArmySaga, commanderRed, ninjaMurasaki, colonelSilver, generalWhite, krillinRedRibbonArmySaga,
                                                     yamcha, bulma, chiChi, piccolo, goku, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi, krillinPiccoloSaga,
                                                     saibamanSaiyanSaga, yajirobeSaiyanSaga, gohanSaiyanSaga, bulmaSaiyanSaga, nappaSaiyanSaga, chiaotzuSaiyanSaga, raditzSaiyanSaga, masterRoshiSaiyanSaga, yamchaSaiyanSaga, tienSaiyanSaga, vegetaSaiyanSaga, gokuSaiyanSaga, kingKaiSaiyanSaga, piccoloSaiyanSaga, krillinSaiyanSaga,
-                                                    krillinFriezaSaga, yajirobeFriezaSaga, dendeFriezaSaga, gohanFriezaSaga, piccoloFriezaSaga, kingKaiFriezaSaga, bulmaFriezaSaga, recoome, burter, jeice, guldo, captainGinyu, zarbon, gokuFriezaSaga, vegetaFriezaSaga,
+                                                    krillinFriezaSaga, yajirobeFriezaSaga, dendeFriezaSaga, gohanFriezaSaga, piccoloFriezaSaga, kingKaiFriezaSaga, bulmaFriezaSaga, recoome, burter, jeice, guldo, captainGinyu, zarbon, gokuFriezaSaga, vegetaFriezaSaga, frieza,
                                                     teenGohan, vegetaCellSaga, futureTrunks, cell, gokuCellSaga, android18, android16, krillinCellSaga, piccoloCellSaga, tienCellSaga, dendeCellSaga, mrPopoCellSaga, chiaotzuCellSaga, trunksCellSaga,
                                                     gokuMajinBuuSaga, gotenMajinBuuSaga, trunksMajinBuuSaga, gotenksMajibBuuSaga, majinBuu, babidi, gohanMajinBuuSaga, mrSatanMajinBuuSaga));
 
