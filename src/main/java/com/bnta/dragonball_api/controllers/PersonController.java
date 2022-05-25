@@ -341,16 +341,27 @@ public class PersonController {
 
     //POST
     @PostMapping // localhost:8080/persons
-    public ResponseEntity<Person> createPerson(@RequestBody Person newPerson){
-        personRepository.save(newPerson);
-        return new ResponseEntity<>(newPerson, HttpStatus.CREATED);
+    public ResponseEntity<Person> createPerson(@RequestBody Person newPerson) throws Exception{
+        Long id = newPerson.getId();
+        Optional<Person> person = personRepository.findById(id);
+        if(person.isEmpty()) {
+            personRepository.save(newPerson);
+            return new ResponseEntity<>(newPerson, HttpStatus.CREATED);
+        } else {
+            throw new Exception("Person with id: " + id + " already exists");
+        }
     }
 
     //DELETE
     @DeleteMapping(value = "/{id}") //localhost:8080/persons/1
-    public ResponseEntity<Person> deletePerson(@PathVariable Long id){
-        personRepository.deleteById(id);
-        return new ResponseEntity(id,HttpStatus.OK);
+    public ResponseEntity<Person> deletePerson(@PathVariable Long id) throws Exception{
+        Optional<Person> person = personRepository.findById(id);
+        if(person.isEmpty()){
+            throw new Exception("Person with id: " + id + " not found");
+        } else {
+            personRepository.deleteById(id);
+            return new ResponseEntity(id, HttpStatus.OK);
+        }
     }
 
     //UPDATE

@@ -77,16 +77,27 @@ public class TechniqueController {
 
     //POST
     @PostMapping // localhost:8080/techniques
-    public ResponseEntity<Technique> createTechnique(@RequestBody Technique newTechnique){
-        techniqueRepository.save(newTechnique);
-        return new ResponseEntity<>(newTechnique, HttpStatus.CREATED);
+    public ResponseEntity<Technique> createTechnique(@RequestBody Technique newTechnique) throws Exception{
+        Long id = newTechnique.getId();
+        Optional<Technique> technique = techniqueRepository.findById(id);
+        if(technique.isEmpty()) {
+            techniqueRepository.save(newTechnique);
+            return new ResponseEntity<>(newTechnique, HttpStatus.CREATED);
+        } else {
+            throw new Exception("Technique with id: " + id + " already exists");
+        }
     }
 
     //DELETE
     @DeleteMapping(value = "/{id}") //localhost:8080/techniques/1
-    public ResponseEntity<Technique> deleteTechnique(@PathVariable Long id){
-        techniqueRepository.deleteById(id);
-        return new ResponseEntity(id,HttpStatus.OK);
+    public ResponseEntity<Technique> deleteTechnique(@PathVariable Long id) throws Exception{
+        Optional<Technique> technique = techniqueRepository.findById(id);
+        if(technique.isEmpty()){
+            throw new Exception("Technique with id: " + id + " not found");
+        } else {
+            techniqueRepository.deleteById(id);
+            return new ResponseEntity(id, HttpStatus.OK);
+        }
     }
 
     //UPDATE
