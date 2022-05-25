@@ -56,23 +56,23 @@ public class Dataloader implements ApplicationRunner {
                 LocalDate.of(2001, 9, 10));
 
 
-        //Dragon ball Super
-        Saga godsOfTheUniverseSaga = new Saga("Gods of the Universe Saga", Series.DragonBall_Super, "1 - 27",
-                LocalDate.of(2017, 1, 7));
-
-        Saga zenoSaga = new Saga("Zeno Saga", Series.DragonBall_Super, "28 - 131",
-                LocalDate.of(2017, 8, 5));
-
-
-        //Dragon ball GT
-        Saga grandTourSaga = new Saga("Grand Tour Saga", Series.DragonBall_GT, "1- 64",
-                LocalDate.of(2005, 2 ,5 ));
+//        //Dragon ball Super
+//        Saga godsOfTheUniverseSaga = new Saga("Gods of the Universe Saga", Series.DragonBall_Super, "1 - 27",
+//                LocalDate.of(2017, 1, 7));
+//
+//        Saga zenoSaga = new Saga("Zeno Saga", Series.DragonBall_Super, "28 - 131",
+//                LocalDate.of(2017, 8, 5));
+//
+//
+//        //Dragon ball GT
+//        Saga grandTourSaga = new Saga("Grand Tour Saga", Series.DragonBall_GT, "1- 64",
+//                LocalDate.of(2005, 2 ,5 ));
 
 
         sagaRepository.saveAll(Arrays.asList(sonGokuSaga, redRibbonArmySaga, piccoloSaga,
-                                             saiyanSaga, friezaSaga, cellSaga, majinBuuSaga,
-                                             godsOfTheUniverseSaga, zenoSaga,
-                                             grandTourSaga));
+                                             saiyanSaga, friezaSaga, cellSaga, majinBuuSaga));
+//                                             godsOfTheUniverseSaga, zenoSaga,
+//                                             grandTourSaga
 
         // Shared Techniques
         Technique flight = new Technique("Flight","Movement");
@@ -491,7 +491,8 @@ public class Dataloader implements ApplicationRunner {
         Person majinVegeta = new Person(Series.DragonBall_Z, "Majin Vegeta", 48, "Planet Vegeta", "Saiyan",
                 majinBuuSaga, Arrays.asList(finalImapct));
 
-        personRepository.saveAll(Arrays.asList(gokuSonGokuSaga, bulmaSonGokuSaga, chichiSonGokuSaga,krillinSonGokuSaga,yamchaSonGokuSaga, roshiSonGokuSaga, launchSonGokuSaga, namSonGokuSaga, giranSonGokuSaga,boraRedRibbonArmySaga, android8RedRibbonArmySaga, generalBlue, bandagesTheMummy, masterRoshiRedRibbonArmySaga, akkumanRedRibbonArmySaga, mercenaryTaoRedRibbonArmySaga, korinRedRibbonArmySaga, kidGokuRedRibbonArmySaga, grandpaGohanRedRibbonArmySaga, commanderRed, ninjaMurasaki, colonelSilver, generalWhite, krillinRedRibbonArmySaga,
+        personRepository.saveAll(Arrays.asList(gokuSonGokuSaga, bulmaSonGokuSaga, chichiSonGokuSaga,krillinSonGokuSaga,yamchaSonGokuSaga, roshiSonGokuSaga, launchSonGokuSaga, namSonGokuSaga, giranSonGokuSaga,
+                                                    boraRedRibbonArmySaga, android8RedRibbonArmySaga, generalBlue, bandagesTheMummy, masterRoshiRedRibbonArmySaga, akkumanRedRibbonArmySaga, mercenaryTaoRedRibbonArmySaga, korinRedRibbonArmySaga, kidGokuRedRibbonArmySaga, grandpaGohanRedRibbonArmySaga, commanderRed, ninjaMurasaki, colonelSilver, generalWhite, krillinRedRibbonArmySaga,
                                                     yamcha, bulma, chiChi, piccolo, goku, chiaotzu, tienShinhan, yajirobe, oolong, kami, paur, masterRoshi, krillinPiccoloSaga,
                                                     saibamanSaiyanSaga, yajirobeSaiyanSaga, gohanSaiyanSaga, bulmaSaiyanSaga, nappaSaiyanSaga, chiaotzuSaiyanSaga, raditzSaiyanSaga, masterRoshiSaiyanSaga, yamchaSaiyanSaga, tienSaiyanSaga, vegetaSaiyanSaga, gokuSaiyanSaga, kingKaiSaiyanSaga, piccoloSaiyanSaga, krillinSaiyanSaga,
                                                     krillinFriezaSaga, yajirobeFriezaSaga, dendeFriezaSaga, gohanFriezaSaga, piccoloFriezaSaga, kingKaiFriezaSaga, bulmaFriezaSaga, recoome, burter, jeice, guldo, captainGinyu, zarbon, gokuFriezaSaga, vegetaFriezaSaga, frieza,
