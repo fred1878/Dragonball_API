@@ -41,9 +41,9 @@ public class SagaController {
                 }
             }
             List<Saga> list4 = sagaRepository.findByPersonsName(personName);
-            List<Saga> out = new ArrayList<>(Stream.of(list1, list2, list3, list4).flatMap(List::stream)//create a stream of each item in each list
-                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//compare each item by id and remove duplicates
-            return new ResponseEntity<>(out, HttpStatus.OK);
+            List<Saga> out = new ArrayList<>(Stream.of(list1, list2, list3, list4).flatMap(List::stream)//create a stream of each list, then convert the list of lists to one big list(flattening)
+                    .collect(Collectors.toMap(Saga::getId, d -> d, (Saga x, Saga y) -> x == null ? y : x)).values());//create a map out of the list using the id as the key and the saga as the value,
+            return new ResponseEntity<>(out, HttpStatus.OK);                                                        // where if the value is a duplicate it is ignored as the value will be null when toMap is applied
         }
         if(strDate != null && name != null && series == null && personName != null){
             LocalDate date = LocalDate.parse(strDate, DateTimeFormatter.BASIC_ISO_DATE);
