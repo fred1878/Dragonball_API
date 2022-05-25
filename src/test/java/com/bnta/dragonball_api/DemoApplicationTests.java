@@ -36,14 +36,14 @@ class DemoApplicationTests {
 	// Saga query tests
 	@Test
 	public void canFindSagaByReleaseDateAfter(){
-		List<Saga> found = sagaRepository.findByReleaseDateAfter(LocalDate.of(2005, 2 ,05 ));
+		List<Saga> found = sagaRepository.findByReleaseDateAfter(LocalDate.of(2002, 1 ,01 ));
 		assertThat(found.size()).isEqualTo(2);
 	}
 
 	@Test
 	public void canFindSagaByNameContainingIgnoreCase(){
 		List<Saga> found = sagaRepository.findByNameContainingIgnoreCase("saga");
-		assertThat(found.size()).isEqualTo(10);
+		assertThat(found.size()).isEqualTo(7);
 	}
 
 	@Test
