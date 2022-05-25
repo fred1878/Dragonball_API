@@ -56,3 +56,9 @@ To PUT(update) an element use local host:8080/{endpoint}/{id} and pass in JSON d
 To DELETE an element use localhost:8080/{endpoint}/{id} if there is no element with that id an exception will be thrown<br>
 
 ## Dependencies
+
+Junit and assertj for testing.<br>
+Spring Web<br>
+Spring Boot DevTools<br>
+Spring Data JPA<br>
+H2 Database<br>
