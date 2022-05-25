@@ -55,7 +55,7 @@ class DemoApplicationTests {
 	@Test
 	public void canFindSagaByPersonsName(){
 		List<Saga> found = sagaRepository.findByPersonsName("Bulma");
-		assertThat(found.size()).isEqualTo(3);
+		assertThat(found.size()).isEqualTo(4);
 	}
 
 	// Person query tests
@@ -74,7 +74,7 @@ class DemoApplicationTests {
 	@Test
 	public void canFindPersonByAgeGreaterThan(){
 		List<Person> found = personRepository.findByAgeGreaterThan(50);
-		assertThat(found.size()).isEqualTo(6);
+		assertThat(found.size()).isEqualTo(10);
 	}
 
 	@Test
@@ -86,26 +86,26 @@ class DemoApplicationTests {
 	@Test
 	public void canFindPersonsBySeries(){
 		List<Person> found = personRepository.findBySeries(Series.DragonBall);
-		assertThat(found.size()).isEqualTo(13);
+		assertThat(found.size()).isEqualTo(37);
 	}
 
 	// Technique query tests
 	@Test
 	public void canFindTechniqueByNameContainingIgnoreCase(){
 		List<Technique> found = techniqueRepository.findByNameContainingIgnoreCase("Kamehameha");
-		assertThat(found.size()).isEqualTo(1);
+		assertThat(found.size()).isEqualTo(2);
 	}
 
 	@Test
 	public void canFindTechniqueByTypeContainingIgnoreCase(){
 		List<Technique> found = techniqueRepository.findByTypeContainingIgnoreCase("Rush");
-		assertThat(found.size()).isEqualTo(11);
+		assertThat(found.size()).isEqualTo(19);
 	}
 
 	@Test
 	public void canFindTechniqueByPersonName(){
 		List<Technique> found = techniqueRepository.findByPersonsName("Goku");
-		assertThat(found.size()).isEqualTo(2);
+		assertThat(found.size()).isEqualTo(22);
 	}
 
 	@Test
