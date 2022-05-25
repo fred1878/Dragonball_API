@@ -97,7 +97,7 @@ public class TechniqueController {
             throw new Exception("Technique with id: " + id + " not found");
         } else {
             techniqueRepository.deleteById(id);
-            return new ResponseEntity(id, HttpStatus.OK);
+            return new ResponseEntity("Deleted Technique with id: " + id, HttpStatus.OK);
         }
     }
 

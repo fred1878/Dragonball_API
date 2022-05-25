@@ -362,7 +362,7 @@ public class PersonController {
             throw new Exception("Person with id: " + id + " not found");
         } else {
             personRepository.deleteById(id);
-            return new ResponseEntity(id, HttpStatus.OK);
+            return new ResponseEntity("Deleted Person with id: " + id, HttpStatus.OK);
         }
     }
 

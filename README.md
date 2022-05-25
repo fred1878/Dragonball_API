@@ -54,3 +54,5 @@ To GET an element by id use localhost:8080/{endpoint}/{id} <br>
 To POST to an endpoint use localhost:8080/{endpoint} and pass in JSON data, if there is an element with that id an exception will be thrown<br>
 To PUT(update) an element use local host:8080/{endpoint}/{id} and pass in JSON data, if there is no element with that id an exception will be thrown<br>
 To DELETE an element use localhost:8080/{endpoint}/{id} if there is no element with that id an exception will be thrown<br>
+
+## Dependencies

@@ -200,7 +200,7 @@ public class SagaController {
             throw new Exception("Saga with id: " + id + " not found");
         } else {
             sagaRepository.deleteById(id);
-            return new ResponseEntity(id, HttpStatus.OK);
+            return new ResponseEntity("Deleted Saga with id: " + id, HttpStatus.OK);
         }
     }
 
