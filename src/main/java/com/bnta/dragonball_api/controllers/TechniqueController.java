@@ -72,7 +72,8 @@ public class TechniqueController {
     //SHOW
     @GetMapping(value = "/{id}") //localhost:8080/techniques/1
     public ResponseEntity<Optional<Technique>> getTechnique(@PathVariable Long id){
-        return new ResponseEntity<>(techniqueRepository.findById(id), HttpStatus.OK);
+        Optional<Technique> technique = techniqueRepository.findById(id);
+        return new ResponseEntity<>(technique, technique.isEmpty() ? HttpStatus.NOT_FOUND : HttpStatus.OK);
     }
 
     //POST

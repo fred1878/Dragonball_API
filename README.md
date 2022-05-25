@@ -43,7 +43,7 @@ The sagas endpoint is located at localhost:8080/sagas and can be queried with:
 
 1. name **(Case-insensitive)** eg.localhost:8080/sagas?name=Piccolo
 2. releaseDate **(Release date after YYYYMMDD)** eg.localhost:8080/sagas?releaseDate=20050101
-3. series **(DragonBall, DragonBall_Z, DragonBall_Super, DragonBall_GT)** eg. localhost:8080/sagas?series=DragonBall
+3. series **(DragonBall and DragonBall_Z currently)** eg. localhost:8080/sagas?series=DragonBall
 4. personName **(Case-sensitive, returns sagas person features in)** eg. localhost:8080/sagas?personName=Vegeta
 
 ## CRUD Functionality
@@ -52,5 +52,5 @@ Accessing each endpoint with no queries GETs all elements. <br>
 
 To GET an element by id use localhost:8080/{endpoint}/{id} <br>
 To POST to an endpoint use localhost:8080/{endpoint} and pass in JSON data, if there is an element with that id an exception will be thrown<br>
-To PUT(update) an element use localhost:8080/{endpoint}/{id} and pass in JSON data, if there is no element with that id an exception will be thrown<br>
+To PUT(update) an element use local host:8080/{endpoint}/{id} and pass in JSON data, if there is no element with that id an exception will be thrown<br>
 To DELETE an element use localhost:8080/{endpoint}/{id} if there is no element with that id an exception will be thrown<br>

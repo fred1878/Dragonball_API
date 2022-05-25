@@ -1,6 +1,7 @@
 package com.bnta.dragonball_api.controllers;
 
 import com.bnta.dragonball_api.models.Person;
+import com.bnta.dragonball_api.models.Saga;
 import com.bnta.dragonball_api.models.Series;
 import com.bnta.dragonball_api.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -336,7 +337,8 @@ public class PersonController {
     //SHOW
     @GetMapping(value = "/{id}") //localhost:8080/persons/1
     public ResponseEntity<Optional<Person>> getPerson(@PathVariable Long id){
-        return new ResponseEntity<>(personRepository.findById(id), HttpStatus.OK);
+        Optional<Person> person = personRepository.findById(id);
+        return new ResponseEntity<>(person, person.isEmpty() ? HttpStatus.NOT_FOUND : HttpStatus.OK);
     }
 
     //POST

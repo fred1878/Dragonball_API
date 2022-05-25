@@ -175,7 +175,8 @@ public class SagaController {
     //SHOW
     @GetMapping(value = "/{id}") //localhost:8080/sagas/1
     public ResponseEntity<Optional<Saga>> getSaga(@PathVariable Long id){
-        return new ResponseEntity<>(sagaRepository.findById(id), HttpStatus.OK);
+        Optional<Saga> saga = sagaRepository.findById(id);
+        return new ResponseEntity<>(saga, saga.isEmpty() ? HttpStatus.NOT_FOUND : HttpStatus.OK);
     }
 
     //POST
