@@ -49,7 +49,8 @@ The sagas endpoint is located at localhost:8080/sagas and can be queried with:
 ## CRUD Functionality
 
 Accessing each endpoint with no queries GETs all elements. <br>
+
 To GET an element by id use localhost:8080/{endpoint}/{id} <br>
-To POST to an endpoint use localhost:8080/{endpoint} and pass in JSON data<br>
+To POST to an endpoint use localhost:8080/{endpoint} and pass in JSON data, if there is an element with that id an exception will be thrown<br>
 To PUT(update) an element use localhost:8080/{endpoint}/{id} and pass in JSON data, if there is no element with that id an exception will be thrown<br>
-To DELETE an element use localhost:8080/{endpoint}/{id}<br>
+To DELETE an element use localhost:8080/{endpoint}/{id} if there is no element with that id an exception will be thrown<br>

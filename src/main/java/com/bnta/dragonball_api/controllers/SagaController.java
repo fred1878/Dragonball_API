@@ -180,16 +180,27 @@ public class SagaController {
 
     //POST
     @PostMapping // localhost:8080/sagas
-    public ResponseEntity<Saga> createSaga(@RequestBody Saga newSaga){
-        sagaRepository.save(newSaga);
-        return new ResponseEntity<>(newSaga, HttpStatus.CREATED);
+    public ResponseEntity<Saga> createSaga(@RequestBody Saga newSaga) throws Exception{
+        Long id = newSaga.getId();
+        Optional<Saga> saga = sagaRepository.findById(id);
+        if(saga.isEmpty()) {
+            sagaRepository.save(newSaga);
+            return new ResponseEntity<>(newSaga, HttpStatus.CREATED);
+        } else {
+            throw new Exception("Saga with id: " + id + " already exists");
+        }
     }
 
     //DELETE
     @DeleteMapping(value = "/{id}") //localhost:8080/sagas/1
-    public ResponseEntity<Saga> deleteSaga(@PathVariable Long id){
-        sagaRepository.deleteById(id);
-        return new ResponseEntity(id,HttpStatus.OK);
+    public ResponseEntity<Saga> deleteSaga(@PathVariable Long id) throws Exception{
+        Optional<Saga> saga = sagaRepository.findById(id);
+        if(saga.isEmpty()){
+            throw new Exception("Saga with id: " + id + " not found");
+        } else {
+            sagaRepository.deleteById(id);
+            return new ResponseEntity(id, HttpStatus.OK);
+        }
     }
 
     //UPDATE
