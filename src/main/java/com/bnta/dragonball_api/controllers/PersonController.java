@@ -21,7 +21,7 @@ public class PersonController {
 
     @Autowired
     PersonRepository personRepository;
-
+    
     //INDEX
     @GetMapping //localhost:8080/persons
     public ResponseEntity<List<Person>> getAllPersonsAndFilter(
