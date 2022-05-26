@@ -7,6 +7,16 @@ This API features:
 2. Derived queries for multiple end-points **(see list)**
 3. Full CRUD functionality
 
+## Table of Contents
+[Diagrams](##Diagrams)<br>
+[Queries](##Queries)<br>
+[CRUD Functionality](##CRUDFunctionality)<br>
+[Tests](##Tests)<br>
+[Dependencies](##Dependencies)<br>
+[Installation](##Installation)
+
+## Diagrams
+
 ### Class Diagram
 <img src="images/classDiagramV2.png">
 
@@ -69,3 +79,8 @@ Spring Web<br>
 Spring Boot DevTools<br>
 Spring Data JPA<br>
 H2 Database<br>
+
+## Installation
+
+1. Clone this repository : `git clone git@github.com:fred1878/Dragonball_API.git`
+2. Access the endpoints either in browser with localhost:8080/{endpoint} or Postman
