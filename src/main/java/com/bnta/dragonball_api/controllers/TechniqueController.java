@@ -3,13 +3,11 @@ package com.bnta.dragonball_api.controllers;
 import com.bnta.dragonball_api.models.Technique;
 import com.bnta.dragonball_api.repositories.TechniqueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
